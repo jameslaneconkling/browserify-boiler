@@ -2,20 +2,28 @@
   "name": "browserify-boilerplate",
   "version": "1.0.0",
   "description": "a small browserify boilerplate app",
-  "main": "index.js",
+  "main": "app/scripts/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "deploy": "gulp deploy"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.11.2",
     "browserify": "^13.0.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-if": "^2.0.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
+    "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "browser-sync": "^2.11.2",
-    "watchify": "^3.7.0"
   }
 }
