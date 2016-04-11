@@ -7,6 +7,7 @@ var gulp           = require('gulp'),
     gutil          = require('gulp-util'),
     sourcemaps     = require('gulp-sourcemaps'),
     gulpif         = require('gulp-if'),
+    jshint         = require('gulp-jshint'),
     uglify         = require('gulp-uglify'),
     sass           = require('gulp-sass'),
     autoprefixer   = require('gulp-autoprefixer'),
@@ -18,12 +19,13 @@ var customOpts = {
   debug: true
 };
 
-var b = browserify(customOpts);
 
-function bundle() {
-  return b.bundle()
+function bundler(bundle) {
+  return bundle.bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('app.js'))
+    // .pipe(jshint())
+    // .pipe(jshint.reporter('default'));
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe( gulpif(ENV === 'production', uglify().on('error', gutil.log)) )
@@ -32,10 +34,11 @@ function bundle() {
     .pipe( gulpif(ENV === 'development', browserSync.reload({ stream: true })) );
 }
 
-gulp.task('browserify', bundle);
-b.on('update', bundle);
-b.on('log', gutil.log);
+var bundle = browserify(customOpts);
+bundle.on('update', function() { bundler(bundle); });
+bundle.on('log', gutil.log);
 
+gulp.task('browserify', function() { bundler(bundle); });
 
 /****************************************************/
 // asset precompile tasks
