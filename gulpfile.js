@@ -12,6 +12,8 @@ var gulp           = require('gulp'),
     uglify         = require('gulp-uglify'),
     sass           = require('gulp-sass'),
     autoprefixer   = require('gulp-autoprefixer'),
+    changed        = require('gulp-changed'),
+    imagemin       = require('gulp-imagemin'),
     ghPages        = require('gulp-gh-pages');
 
 var ENV;
@@ -58,6 +60,14 @@ gulp.task('sass', function(){
     .pipe( gulpif(ENV === 'development', browserSync.reload({ stream: true })) );
 });
 
+gulp.task('images', function(){
+  gulp.src('./app/images/**')
+    .pipe(changed('./dist/images')) // Ignore unchanged files
+    .pipe(imagemin())
+    .pipe(gulp.dest('./dist/images'))
+    .pipe( gulpif(ENV !== 'production', browserSync.reload({ stream: true })) );
+});
+
 /****************************************************/
 // Move files not involved in a precompile
 /****************************************************/
@@ -101,7 +111,7 @@ gulp.task('gh-pages', function(){
 /****************************************************/
 // Exported tasks
 /****************************************************/
-gulp.task('build', ['lint', 'browserify', 'sass', 'move']);
+gulp.task('build', ['lint', 'browserify', 'sass', 'images', 'move']);
 
 gulp.task('dev', ['development', 'build', 'serve', 'watch']);
 
