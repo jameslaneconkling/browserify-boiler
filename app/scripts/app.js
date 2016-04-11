@@ -1,3 +1,1 @@
-console.log('asdfasdfasdfasdfasdfasdfasdsdff')
-xxx = 'asdf'
-  y = 'asdf'
+console.log('goodbye world');
