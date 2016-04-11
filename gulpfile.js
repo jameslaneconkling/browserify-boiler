@@ -8,24 +8,22 @@ var gulp           = require('gulp'),
     sourcemaps     = require('gulp-sourcemaps'),
     gulpif         = require('gulp-if'),
     jshint         = require('gulp-jshint'),
+    stylish        = require('jshint-stylish'),
     uglify         = require('gulp-uglify'),
     sass           = require('gulp-sass'),
     autoprefixer   = require('gulp-autoprefixer'),
     ghPages        = require('gulp-gh-pages');
 
 var ENV;
-var customOpts = {
-  entries: ['./app/scripts/app.js'],
-  debug: true
-};
 
 
+/****************************************************/
+// asset precompile tasks
+/****************************************************/
 function bundler(bundle) {
   return bundle.bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('app.js'))
-    // .pipe(jshint())
-    // .pipe(jshint.reporter('default'));
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe( gulpif(ENV === 'production', uglify().on('error', gutil.log)) )
@@ -34,15 +32,22 @@ function bundler(bundle) {
     .pipe( gulpif(ENV === 'development', browserSync.reload({ stream: true })) );
 }
 
-var bundle = browserify(customOpts);
+var bundle = browserify({
+  entries: ['./app/scripts/app.js'],
+  debug: true
+});
 bundle.on('update', function() { bundler(bundle); });
 bundle.on('log', gutil.log);
 
 gulp.task('browserify', function() { bundler(bundle); });
 
-/****************************************************/
-// asset precompile tasks
-/****************************************************/
+
+gulp.task('lint', function() {
+  gulp.src('./app/scripts/**/*.js')
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter(stylish));
+});
+
 gulp.task('sass', function(){
   gulp.src('./app/styles/**/*.{scss,sass,css}')
     .pipe(sourcemaps.init())
@@ -59,10 +64,6 @@ gulp.task('sass', function(){
 gulp.task('move', function(){
   gulp.src('./app/*.{html,txt}')
     .pipe(gulp.dest('./dist'));
-
-  // gulp.src('./node_modules/zurb-foundation-npm/css/foundation.min.css')
-  //   .pipe(gulp.dest('./dist/styles'));
-
 });
 
 /****************************************************/
@@ -83,7 +84,7 @@ gulp.task('watch', function(){
 
   gulp.watch(['./app/**/*.html'], ['move', browserSync.reload]);
 
-  gulp.watch(['./app/scripts/**/*.{js,hbs}'], ['browserify', browserSync.reload]);
+  gulp.watch(['./app/scripts/**/*.{js,hbs}'], ['lint', 'browserify', browserSync.reload]);
 });
 
 gulp.task('serve', function(){
@@ -100,7 +101,7 @@ gulp.task('gh-pages', function(){
 /****************************************************/
 // Exported tasks
 /****************************************************/
-gulp.task('build', ['browserify', 'sass', 'move']);
+gulp.task('build', ['lint', 'browserify', 'sass', 'move']);
 
 gulp.task('dev', ['development', 'build', 'serve', 'watch']);
 
