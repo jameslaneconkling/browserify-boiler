@@ -2,6 +2,7 @@
 var gulp           = require('gulp'),
     browserSync    = require('browser-sync'),
     browserify     = require('browserify'),
+    es6ify         = require('es6ify'),
     source         = require('vinyl-source-stream'),
     buffer         = require('vinyl-buffer'),
     gutil          = require('gulp-util'),
@@ -23,12 +24,15 @@ var ENV;
 // asset precompile tasks
 /****************************************************/
 function bundler(bundle) {
-  return bundle.bundle()
+  return bundle
+    .add(es6ify.runtime)
+    .transform(es6ify)
+    .bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('app.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
-      .pipe( gulpif(ENV === 'production', uglify().on('error', gutil.log)) )
+    .pipe(uglify().on('error', gutil.log))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/scripts'))
     .pipe( gulpif(ENV === 'development', browserSync.reload({ stream: true })) );
@@ -65,7 +69,7 @@ gulp.task('images', function(){
     .pipe(changed('./dist/images')) // Ignore unchanged files
     .pipe(imagemin())
     .pipe(gulp.dest('./dist/images'))
-    .pipe( gulpif(ENV !== 'production', browserSync.reload({ stream: true })) );
+    .pipe( gulpif(ENV === 'development', browserSync.reload({ stream: true })) );
 });
 
 /****************************************************/
