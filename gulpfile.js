@@ -1,7 +1,7 @@
 'use strict';
 var gulp           = require('gulp'),
     browserSync    = require('browser-sync'),
-    browserify     = require('browserify'),
+    browserify     = require('browserify')({debug: true}),
     es6ify         = require('es6ify'),
     source         = require('vinyl-source-stream'),
     buffer         = require('vinyl-buffer'),
@@ -24,10 +24,9 @@ var ENV;
 /****************************************************/
 // asset precompile tasks
 /****************************************************/
-function bundler(bundle) {
-  return bundle
-    .add(es6ify.runtime)
-    .transform(es6ify)
+function bundler(browserify) {
+  return browserify
+    .require(require.resolve('./app/scripts/app.js'), { entry: true })
     .bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('app.js'))
@@ -39,14 +38,9 @@ function bundler(bundle) {
     .pipe( gulpif(ENV === 'development', browserSync.reload({ stream: true })) );
 }
 
-var bundle = browserify({
-  entries: ['./app/scripts/app.js'],
-  debug: true
-});
-bundle.on('update', function() { bundler(bundle); });
-bundle.on('log', gutil.log);
-
-gulp.task('browserify', function() { bundler(bundle); });
+gulp.task('browserify', function() { bundler(browserify); });
+browserify.on('update', function() { bundler(browserify); });
+browserify.on('log', gutil.log);
 
 
 gulp.task('lint', function() {
