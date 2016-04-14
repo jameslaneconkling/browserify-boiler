@@ -1,3 +1,16 @@
+## Browserify Boilerplate
+
+===
+
+A gulp/browserify starter kit, with a few bells and whistles, including
+* es6 transpilation
+* linting
+* live reload
+* sass compilation
+* code and image minification
+* deployment to gh-pages
+
+
 ### Installation
 ```bash
 npm install -g gulp
