@@ -4,4 +4,4 @@ let message = 'goodbye world...!';
 
 let log = (input) => console.log(input);
 log(message);
-log(_.add(2,3));
+log(_.add(5,1));

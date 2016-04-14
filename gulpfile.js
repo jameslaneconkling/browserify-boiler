@@ -2,8 +2,7 @@
 var gulp           = require('gulp'),
     browserSync    = require('browser-sync'),
     browserify     = require('browserify')({debug: true}),
-    fs             = require('fs'),
-    es6ify         = require('es6ify'),
+    babelify       = require("babelify"),
     source         = require('vinyl-source-stream'),
     buffer         = require('vinyl-buffer'),
     gutil          = require('gulp-util'),
@@ -27,19 +26,19 @@ var ENV;
 /****************************************************/
 function bundler(browserify) {
   return browserify
-    .add(es6ify.runtime)
-    .transform(es6ify.configure(/^(?!.*node_modules)+.+\.js$/))
+    .transform("babelify", {
+      presets: ["es2015"],
+
+    })
     .require(require.resolve('./app/scripts/app.js'), { entry: true })
     .bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
-    // .pipe(fs.createWriteStream('./dist/scripts/app.js'))
     .pipe(source('app.js'))
     .pipe(buffer())
     // .pipe(sourcemaps.init({ loadMaps: true }))
     // .pipe(uglify().on('error', gutil.log))
     // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/scripts'))
-    .pipe( gulpif(ENV === 'development', browserSync.reload({ stream: true })) );
 }
 
 gulp.task('browserify', function() { bundler(browserify); });
