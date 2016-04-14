@@ -2,7 +2,6 @@
 var gulp           = require('gulp'),
     browserSync    = require('browser-sync'),
     browserify     = require('browserify')({debug: true}),
-    es6ify         = require('es6ify'),
     source         = require('vinyl-source-stream'),
     buffer         = require('vinyl-buffer'),
     gutil          = require('gulp-util'),
