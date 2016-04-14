@@ -12,6 +12,7 @@ var gulp           = require('gulp'),
     stylish        = require('jshint-stylish'),
     uglify         = require('gulp-uglify'),
     sass           = require('gulp-sass'),
+    cleanCSS       = require('gulp-clean-css'),
     autoprefixer   = require('gulp-autoprefixer'),
     changed        = require('gulp-changed'),
     imagemin       = require('gulp-imagemin'),
@@ -56,10 +57,9 @@ gulp.task('lint', function() {
 
 gulp.task('sass', function(){
   gulp.src('./app/styles/**/*.{scss,sass,css}')
-    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.write())
     .pipe(autoprefixer({ browsers: ['last 2 version'] }))
+    .pipe(cleanCSS())
     .pipe(gulp.dest('./dist/styles'))
     .pipe( gulpif(ENV === 'development', browserSync.reload({ stream: true })) );
 });
