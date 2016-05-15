@@ -7,7 +7,7 @@ A gulp/browserify starter kit, with a few bells and whistles, including
 * linting
 * live reload
 * sass compilation
-* code and image minification
+* image minification
 * deployment to gh-pages
 
 
