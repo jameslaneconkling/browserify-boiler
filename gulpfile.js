@@ -5,7 +5,6 @@ var gulp           = require('gulp'),
     source         = require('vinyl-source-stream'),
     buffer         = require('vinyl-buffer'),
     gutil          = require('gulp-util'),
-    gulpif         = require('gulp-if'),
     jshint         = require('gulp-jshint'),
     stylish        = require('jshint-stylish'),
     sass           = require('gulp-sass'),
@@ -14,8 +13,6 @@ var gulp           = require('gulp'),
     changed        = require('gulp-changed'),
     imagemin       = require('gulp-imagemin'),
     ghPages        = require('gulp-gh-pages');
-
-var ENV;
 
 var b = browserify('./app/scripts/app.js', {debug: true})
   .transform("babelify", {
@@ -29,9 +26,6 @@ function bundler(b) {
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('app.js'))
     .pipe(buffer())
-    // .pipe(sourcemaps.init({ loadMaps: true }))
-    // .pipe(uglify().on('error', gutil.log))
-    // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/scripts'))
 }
 
@@ -59,46 +53,37 @@ gulp.task('sass', function(){
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({ browsers: ['last 2 version'] }))
     .pipe(cleanCSS())
-    .pipe(gulp.dest('./dist/styles'))
-    .pipe( gulpif(ENV === 'development', browserSync.reload({ stream: true })) );
+    .pipe(gulp.dest('./dist/styles'));
 });
 
 gulp.task('images', function(){
   return gulp.src('./app/images/**')
-    .pipe(changed('./dist/images')) // Ignore unchanged files
+    .pipe(changed('./dist/images'))
     .pipe(imagemin())
     .pipe(gulp.dest('./dist/images'))
-    .pipe( gulpif(ENV === 'development', browserSync.reload({ stream: true })) );
 });
 
 
 /****************************************************/
 // Sync Tasks
 /****************************************************/
-gulp.task('reload', ['move', 'sass', 'lint', 'browserify'], browserSync.reload);
+// reload deps must include all watch deps below, or reload might run before re-compilation is complete
+gulp.task('reload', ['move', 'sass', 'lint', 'images', 'browserify'], browserSync.reload);
 
 gulp.task('watch', function(){
-  gulp.watch(['./app/scripts/**/*.js'], ['lint', 'browserify', 'reload'])
+  gulp.watch(['./app/scripts/**/*.js'], ['lint', 'browserify', 'reload']);
 
   gulp.watch(['./app/**/*.html'], ['move', 'reload']);
 
   gulp.watch(['./app/styles/**/*.{scss,sass,css}'], ['sass', 'reload']);
+
+  gulp.watch(['./app/images/**/*.{png,gif,jpg}'], ['images', 'reload']);
 });
 
 
 /****************************************************/
 // Production tasks
 /****************************************************/
-gulp.task('development', function(){
-  // this is a hack, no?
-  ENV = 'development';
-});
-
-gulp.task('production', function(){
-  // this is a hack, no?
-  ENV = 'production';
-});
-
 gulp.task('serve', function(){
   browserSync({
     server: { baseDir: './dist' },
@@ -117,6 +102,6 @@ gulp.task('gh-pages', function(){
 /****************************************************/
 gulp.task('build', ['lint', 'browserify', 'sass', 'move', 'images']);
 
-gulp.task('dev', ['development', 'build', 'watch', 'serve']);
+gulp.task('dev', ['build', 'watch', 'serve']);
 
-gulp.task('deploy', ['production', 'build', 'gh-pages']);
+gulp.task('deploy', ['build', 'gh-pages']);
