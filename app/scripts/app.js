@@ -1,2 +1,3 @@
-'use strict';
-console.log('goodbye world...');
+import log, {message} from './utils/log';
+
+log(`please log: ${message}`);

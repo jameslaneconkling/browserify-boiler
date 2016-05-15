@@ -1,15 +1,16 @@
 'use strict';
 var gulp           = require('gulp'),
     browserSync    = require('browser-sync'),
-    browserify     = require('browserify')({debug: true}),
+    browserify     = require('browserify'),
+    babelify       = require("babelify"),
     source         = require('vinyl-source-stream'),
     buffer         = require('vinyl-buffer'),
     gutil          = require('gulp-util'),
-    sourcemaps     = require('gulp-sourcemaps'),
+    // sourcemaps     = require('gulp-sourcemaps'),
     gulpif         = require('gulp-if'),
     jshint         = require('gulp-jshint'),
     stylish        = require('jshint-stylish'),
-    uglify         = require('gulp-uglify'),
+    // uglify         = require('gulp-uglify'),
     sass           = require('gulp-sass'),
     cleanCSS       = require('gulp-clean-css'),
     autoprefixer   = require('gulp-autoprefixer'),
@@ -23,24 +24,26 @@ var ENV;
 /****************************************************/
 // asset precompile tasks
 /****************************************************/
-function bundler(browserify) {
-  return browserify
-    .require(require.resolve('./app/scripts/app.js'), { entry: true })
+var b = browserify('./app/scripts/app.js', {debug: true})
+  .transform("babelify", {
+    presets: ["es2015"],
+  });
+
+function bundler(b) {
+  return b
     .bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('app.js'))
     .pipe(buffer())
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(uglify().on('error', gutil.log))
-    .pipe(sourcemaps.write('./'))
+    // .pipe(sourcemaps.init({ loadMaps: true }))
+    // .pipe(uglify().on('error', gutil.log))
+    // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/scripts'))
-    .pipe( gulpif(ENV === 'development', browserSync.reload({ stream: true })) );
 }
 
-gulp.task('browserify', function() { bundler(browserify); });
-browserify.on('update', function() { bundler(browserify); });
-browserify.on('log', gutil.log);
-
+gulp.task('browserify', function() { bundler(b); });
+b.on('update', function() { bundler(b); });
+b.on('log', gutil.log);
 
 gulp.task('lint', function() {
   gulp.src('./app/scripts/**/*.js')
