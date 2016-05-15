@@ -2,15 +2,12 @@
 var gulp           = require('gulp'),
     browserSync    = require('browser-sync'),
     browserify     = require('browserify'),
-    babelify       = require("babelify"),
     source         = require('vinyl-source-stream'),
     buffer         = require('vinyl-buffer'),
     gutil          = require('gulp-util'),
-    // sourcemaps     = require('gulp-sourcemaps'),
     gulpif         = require('gulp-if'),
     jshint         = require('gulp-jshint'),
     stylish        = require('jshint-stylish'),
-    // uglify         = require('gulp-uglify'),
     sass           = require('gulp-sass'),
     cleanCSS       = require('gulp-clean-css'),
     autoprefixer   = require('gulp-autoprefixer'),
@@ -20,14 +17,11 @@ var gulp           = require('gulp'),
 
 var ENV;
 
-
-/****************************************************/
-// asset precompile tasks
-/****************************************************/
 var b = browserify('./app/scripts/app.js', {debug: true})
   .transform("babelify", {
     presets: ["es2015"],
   });
+b.on('log', gutil.log);
 
 function bundler(b) {
   return b
@@ -41,18 +35,27 @@ function bundler(b) {
     .pipe(gulp.dest('./dist/scripts'))
 }
 
-gulp.task('browserify', function() { bundler(b); });
-b.on('update', function() { bundler(b); });
-b.on('log', gutil.log);
+
+/****************************************************/
+// asset compilation tasks
+/****************************************************/
+gulp.task('browserify', function() {
+  return bundler(b);
+});
 
 gulp.task('lint', function() {
-  gulp.src('./app/scripts/**/*.js')
+  return gulp.src('./app/scripts/**/*.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter(stylish));
 });
 
+gulp.task('move', function(){
+  return gulp.src('./app/*.{html,txt}')
+    .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('sass', function(){
-  gulp.src('./app/styles/**/*.{scss,sass,css}')
+  return gulp.src('./app/styles/**/*.{scss,sass,css}')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({ browsers: ['last 2 version'] }))
     .pipe(cleanCSS())
@@ -61,23 +64,30 @@ gulp.task('sass', function(){
 });
 
 gulp.task('images', function(){
-  gulp.src('./app/images/**')
+  return gulp.src('./app/images/**')
     .pipe(changed('./dist/images')) // Ignore unchanged files
     .pipe(imagemin())
     .pipe(gulp.dest('./dist/images'))
     .pipe( gulpif(ENV === 'development', browserSync.reload({ stream: true })) );
 });
 
-/****************************************************/
-// Move files not involved in a precompile
-/****************************************************/
-gulp.task('move', function(){
-  gulp.src('./app/*.{html,txt}')
-    .pipe(gulp.dest('./dist'));
-});
 
 /****************************************************/
-// Dev tasks
+// Sync Tasks
+/****************************************************/
+gulp.task('reload', ['move', 'sass', 'lint', 'browserify'], browserSync.reload);
+
+gulp.task('watch', function(){
+  gulp.watch(['./app/scripts/**/*.js'], ['lint', 'browserify', 'reload'])
+
+  gulp.watch(['./app/**/*.html'], ['move', 'reload']);
+
+  gulp.watch(['./app/styles/**/*.{scss,sass,css}'], ['sass', 'reload']);
+});
+
+
+/****************************************************/
+// Production tasks
 /****************************************************/
 gulp.task('development', function(){
   // this is a hack, no?
@@ -89,17 +99,10 @@ gulp.task('production', function(){
   ENV = 'production';
 });
 
-gulp.task('watch', function(){
-  gulp.watch(['./app/styles/**/*.{scss,sass,css}'], ['sass', browserSync.reload]);
-
-  gulp.watch(['./app/**/*.html'], ['move', browserSync.reload]);
-
-  gulp.watch(['./app/scripts/**/*.{js,hbs}'], ['lint', 'browserify', browserSync.reload]);
-});
-
 gulp.task('serve', function(){
   browserSync({
-    server: { baseDir: 'dist' }
+    server: { baseDir: './dist' },
+    port: process.env.PORT || 3000
   });
 });
 
@@ -108,11 +111,12 @@ gulp.task('gh-pages', function(){
     .pipe(ghPages());
 });
 
+
 /****************************************************/
 // Exported tasks
 /****************************************************/
-gulp.task('build', ['lint', 'browserify', 'sass', 'images', 'move']);
+gulp.task('build', ['lint', 'browserify', 'sass', 'move', 'images']);
 
-gulp.task('dev', ['development', 'build', 'serve', 'watch']);
+gulp.task('dev', ['development', 'build', 'watch', 'serve']);
 
 gulp.task('deploy', ['production', 'build', 'gh-pages']);
