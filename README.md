@@ -1,7 +1,5 @@
 ## Browserify Boilerplate
 
-===
-
 A gulp/browserify starter kit, with a few bells and whistles, including
 * es6 transpilation
 * linting
