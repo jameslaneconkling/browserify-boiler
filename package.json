@@ -2,13 +2,22 @@
   "name": "browserify-boilerplate",
   "version": "1.0.0",
   "description": "a small browserify boilerplate app",
-  "main": "app/scripts/app.js",
   "scripts": {
     "build": "gulp build",
     "dev": "gulp dev",
     "deploy": "gulp deploy"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jameslaneconkling/browserify-boiler.git"
+  },
+  "keywords": [
+    "gulp",
+    "browserify",
+    "boilerplate",
+    "es6"
+  ],
+  "author": "jameslaneconkling",
   "license": "ISC",
   "devDependencies": {
     "babel-preset-es2015": "^6.6.0",
