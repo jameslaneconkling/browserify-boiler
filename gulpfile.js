@@ -1,20 +1,20 @@
 'use strict';
-var gulp           = require('gulp'),
-    browserSync    = require('browser-sync'),
-    browserify     = require('browserify'),
-    source         = require('vinyl-source-stream'),
-    buffer         = require('vinyl-buffer'),
-    gutil          = require('gulp-util'),
-    jshint         = require('gulp-jshint'),
-    stylish        = require('jshint-stylish'),
-    sass           = require('gulp-sass'),
-    cleanCSS       = require('gulp-clean-css'),
-    autoprefixer   = require('gulp-autoprefixer'),
-    changed        = require('gulp-changed'),
-    imagemin       = require('gulp-imagemin'),
-    ghPages        = require('gulp-gh-pages');
+const gulp           = require('gulp'),
+      browserSync    = require('browser-sync'),
+      browserify     = require('browserify'),
+      source         = require('vinyl-source-stream'),
+      buffer         = require('vinyl-buffer'),
+      gutil          = require('gulp-util'),
+      jshint         = require('gulp-jshint'),
+      stylish        = require('jshint-stylish'),
+      sass           = require('gulp-sass'),
+      cleanCSS       = require('gulp-clean-css'),
+      autoprefixer   = require('gulp-autoprefixer'),
+      changed        = require('gulp-changed'),
+      imagemin       = require('gulp-imagemin'),
+      ghPages        = require('gulp-gh-pages');
 
-var b = browserify('./app/scripts/app.js', {debug: true})
+const b = browserify('./app/scripts/app.js', {debug: true})
   .transform("babelify", {
     presets: ["es2015"],
   });
@@ -33,22 +33,20 @@ function bundler(b) {
 /****************************************************/
 // asset compilation tasks
 /****************************************************/
-gulp.task('browserify', function() {
-  return bundler(b);
-});
+gulp.task('browserify', () => bundler(b));
 
-gulp.task('lint', function() {
+gulp.task('lint', () => {
   return gulp.src('./app/scripts/**/*.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter(stylish));
 });
 
-gulp.task('move', function(){
+gulp.task('move', () => {
   return gulp.src('./app/*.{html,txt}')
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('sass', function(){
+gulp.task('sass', () => {
   return gulp.src('./app/styles/**/*.{scss,sass,css}')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({ browsers: ['last 2 version'] }))
@@ -56,7 +54,7 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('./dist/styles'));
 });
 
-gulp.task('images', function(){
+gulp.task('images', () => {
   return gulp.src('./app/images/**')
     .pipe(changed('./dist/images'))
     .pipe(imagemin())
@@ -70,7 +68,7 @@ gulp.task('images', function(){
 // reload deps must include all watch deps below, or reload might run before re-compilation is complete
 gulp.task('reload', ['move', 'sass', 'lint', 'images', 'browserify'], browserSync.reload);
 
-gulp.task('watch', function(){
+gulp.task('watch', () => {
   gulp.watch(['./app/scripts/**/*.js'], ['lint', 'browserify', 'reload']);
 
   gulp.watch(['./app/**/*.html'], ['move', 'reload']);
@@ -84,17 +82,14 @@ gulp.task('watch', function(){
 /****************************************************/
 // Production tasks
 /****************************************************/
-gulp.task('serve', function(){
+gulp.task('serve', () => {
   browserSync({
     server: { baseDir: './dist' },
     port: process.env.PORT || 3000
   });
 });
 
-gulp.task('gh-pages', function(){
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
-});
+gulp.task('gh-pages', () => gulp.src('./dist/**/*').pipe(ghPages()));
 
 
 /****************************************************/
