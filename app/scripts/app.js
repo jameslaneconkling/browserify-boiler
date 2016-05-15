@@ -1,5 +1,4 @@
 'use strict';
-let message = 'goodbye world...!';
+import log, {message} from './utils/log';
 
-let log = (input) => console.log(input);
-log(message);
+log(`please log: ${message}`);
