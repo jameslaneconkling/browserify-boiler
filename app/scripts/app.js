@@ -54,7 +54,7 @@ const app = {
     const textAnnotationsOfSameType = parentEntities
       .map(this.getObjectsByCurie('fise:entity-type'))
       .reduce(...flatMap)
-      .map(type => this.rdf.getSubjects(expandCurie('fise:entity-type'), type))
+      .map(type => this.rdf.getSubjects('fise:entity-type', type))
       .reduce(...flatMap)
       .map(getSubject)
       .map(this.getObjectsByCurie('dcterms:relation'))
