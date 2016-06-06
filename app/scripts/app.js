@@ -13,10 +13,10 @@ const unique = [(uniqueMap, item) => uniqueMap.indexOf(item) === -1 ? uniqueMap.
 const baseURI = 'http://localhost:8080/api/v2/doc/www.npr.org/sections/itsallpolitics/2015/08/20/433253554/iran-lobbying-battle-heats-up-on-the-airwaves/';
 const MARGIN = 30;
 
-const getObjectsByCurie = (graph, curie, subject) => subject.getValues(graph.curieParser.parse(curie));
+const getObjectsByCurie = (rdf, curie, subject) => subject.getValues(rdf.expand(curie));
 const getLabelsForEntityType = (rdf, entityType) => rdf.getSubjects("fise:entity-type", entityType)
   .map(rdf.getSubject.bind(rdf))
-  .map(subject => getObjectsByCurie(rdf.graph, 'fise:entity-label', subject));
+  .map(subject => getObjectsByCurie(rdf, 'fise:entity-label', subject));
 
 
 const app = {
@@ -29,7 +29,7 @@ const app = {
   buildGraph() {
     this.rdf = document.data;
 
-    this.getObjectsByCurie = _.curry(getObjectsByCurie)(this.rdf.graph);
+    this.getObjectsByCurie = _.curry(getObjectsByCurie)(this.rdf);
     // const subjects = rdf.getSubjects()
     //   .map(subjectId => rdf.getSubject(subjectId).toObject());
     // this.graph = rdfaSubjects2jsonGraph(subjects).graph;
@@ -42,7 +42,7 @@ const app = {
 
   highlightEntities(e) {
     const getSubject = this.rdf.getSubject.bind(this.rdf);
-    const expandCurie = this.rdf.graph.curieParser.parse.bind(this.rdf.graph.curieParser);
+    const expandCurie = this.rdf.expand.bind(this.rdf);
 
     const textAnnotationId = $(e.target).closest('[typeof="fise:TextAnnotation"]').attr('resource');
     const textAnnotation = this.rdf.getSubject(textAnnotationId);
