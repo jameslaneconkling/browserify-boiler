@@ -1,5 +1,28 @@
-@import "reset";
-
 body {
   font-family: sans-serif;
+}
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
+[typeof~="fise:TextAnnotation"] {
+  padding: 0 4px;
+  border: 1px dashed #aaa;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.highlight-type {
+  background-color: #ffb;
+}
+
+.highlight-entity {
+  background-color: #bbf;
 }

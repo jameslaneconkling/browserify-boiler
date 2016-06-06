@@ -42,8 +42,13 @@ gulp.task('lint', () => {
 });
 
 gulp.task('move', () => {
-  return gulp.src('./app/*.{html,txt}')
+  gulp.src([
+    './app/*.{html,txt}'
+  ])
     .pipe(gulp.dest('./dist'));
+
+  gulp.src('./app/vendor/**/*.*')
+    .pipe(gulp.dest('./dist/vendor'));
 });
 
 gulp.task('sass', () => {
@@ -55,10 +60,10 @@ gulp.task('sass', () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('./app/images/**')
-    .pipe(changed('./dist/images'))
-    .pipe(imagemin())
-    .pipe(gulp.dest('./dist/images'))
+  // return gulp.src('./app/images/**')
+  //   .pipe(changed('./dist/images'))
+  //   .pipe(imagemin())
+  //   .pipe(gulp.dest('./dist/images'))
 });
 
 

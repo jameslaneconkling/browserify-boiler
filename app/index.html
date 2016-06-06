@@ -1,24 +1,2584 @@
-<!doctype html>
-<html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html prefix="fise: http://fise.iks-project.eu/ontology/">
 <head>
-  <meta charset="utf-8">
-  <!-- <title></title>
-  <meta name="description" content=""> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-  <h1>BROWSERIFY BOILER</h1>
 
-  <!--<script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='//www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
-  </script> -->
+  <!-- <base href="http://localhost:8080/api/v2/doc/www.npr.org/sections/itsallpolitics/2015/08/20/433253554/iran-lobbying-battle-heats-up-on-the-airwaves/" /> -->
+  <script type="text/turtle">
+    @base <http://localhost:8080/api/v2/doc/www.npr.org/sections/itsallpolitics/2015/08/20/433253554/iran-lobbying-battle-heats-up-on-the-airwaves/> .
+    @prefix schema:  <http://schema.org/> .
+    @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix rivium:  <http://rivium.bericotech.com/ontology#> .
+    @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+    @prefix dcterms:  <http://purl.org/dc/terms/> .
+    @prefix fise:  <http://fise.iks-project.eu/ontology/> .
+    @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+    <#char=5766,5769>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5766 ;
+            fise:selection-context  ", said his coalition is" ;
+            fise:selected-text      "his" ;
+            fise:end                5769 .
+
+    <#_88>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a nuclear weapon" .
+
+    <#_153>  dcterms:relation    <#char=5766,5769> ;
+            dcterms:relation     <#char=5738,5746> ;
+            dcterms:relation     <#char=4035,4049> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Dylan Williams" .
+
+    <#_67>  dcterms:relation     <#char=2071,2111> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "American Israel Public Affairs Committee" .
+
+    <#_132>  dcterms:relation    <#char=3555,3567> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Norm Coleman" .
+
+    <#_46>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the measure" .
+
+    <#_25>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "legislators ' public meetings" .
+
+    <#char=5309,5334>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "ORGANIZATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5309 ;
+            fise:selection-context  "group, Veterans Against the Deal." ;
+            fise:selected-text      "Veterans Against the Deal" ;
+            fise:end                5334 .
+
+    <#char=747,759>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              747 ;
+            fise:selection-context  "of Energy Ernest Moniz during Iran" ;
+            fise:selected-text      "Ernest Moniz" ;
+            fise:end                759 .
+
+    <#char=3041,3045>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "DATE" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3041 ;
+            fise:selection-context  "of the 2003 assault on" ;
+            fise:selected-text      "2003" ;
+            fise:end                3045 .
+
+    <#_253>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the Democratic lawmakers who have already endorsed the deal" .
+
+    <#dbpedia-American_Israel_Public_Affairs_Committee>
+            dcterms:relation       <#char=2071,2111> ;
+            fise:extracted-from    <> ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/American_Israel_Public_Affairs_Committee/> ;
+            fise:entity-label      "American Israel Public Affairs Committee"@en ;
+            rdf:type               fise:EntityAnnotation ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime ;
+            fise:confidence-level  "0.06690362"^^xsd:float .
+
+    <#char=11,15>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              11 ;
+            fise:selection-context  "Iran Lobbying Battle" ;
+            fise:selected-text      "Iran" ;
+            fise:end                15 .
+
+    <#char=3903,3907>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3903 ;
+            fise:selection-context  "over the Iran agreement rises" ;
+            fise:selected-text      "Iran" ;
+            fise:end                3907 .
+
+    <#_5>   fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "U.S. Secretary of State John Kerry" .
+
+    <#_96>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a new ad" .
+
+    <#_161>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "two competing world views" .
+
+    <#char=5524,5526>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5524 ;
+            fise:selection-context  "It cut me" ;
+            fise:selected-text      "It" ;
+            fise:end                5526 .
+
+    <#char=5827,5830>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5827 ;
+            fise:selection-context  "Coleman said his groups may" ;
+            fise:selected-text      "his" ;
+            fise:end                5830 .
+
+    <#_54>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "new ones appearing regularly" .
+
+    <#_119>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the big domestic issues -- the Affordable Care Act , for instance , or international trade agreements -- where corporations have big stakes" .
+
+    <#char=5397,5401>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "DATE" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5397 ;
+            fise:selection-context  "Iraq in 2005, the" ;
+            fise:selected-text      "2005" ;
+            fise:end                5401 .
+
+    <#dbpedia-Iraq>  fise:entity-type  schema:Place ;
+            fise:entity-type       schema:AdministrativeArea ;
+            fise:entity-type       schema:Thing ;
+            dcterms:relation       <#char=5389,5393> ;
+            fise:entity-type       schema:Country ;
+            dcterms:relation       <#char=3057,3061> ;
+            fise:entity-label      "Iraq"@en ;
+            fise:extracted-from    <> ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/sws.geonames.org/99237/> ;
+            rdf:type               fise:EntityAnnotation ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            fise:confidence-level  "0.10419598"^^xsd:float .
+
+    <#char=5738,5746>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5738 ;
+            fise:selection-context  "Williams, at" ;
+            fise:selected-text      "Williams" ;
+            fise:end                5746 .
+
+    <#char=767,771>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              767 ;
+            fise:selection-context  "Moniz during Iran nuclear deal" ;
+            fise:selected-text      "Iran" ;
+            fise:end                771 .
+
+    <#_62>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "Citizens for a Nuclear Free Iran , a group with ties to the powerful American Israel Public Affairs Committee" .
+
+    <#_127>  dcterms:relation    <#char=3468,3472> ;
+            dcterms:relation     <#char=3722,3723> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "That" .
+
+    <#_106>  dcterms:relation    <#char=2999,3010> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Dick Cheney" .
+
+    <#_20>  dcterms:relation     <#char=5871,5875> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "advocacy groups" .
+
+    <#char=5357,5372>  schema:homeLocation  <#char=5389,5393> ;
+            rdf:type                fise:TextAnnotation ;
+            fise:extracted-from     <> ;
+            fise:selection-context  "sergeant, Robert Bartlett, was" ;
+            dcterms:type            "PERSON" ;
+            fise:end                5372 ;
+            dcterms:creator         "StanfordNER" ;
+            fise:selected-text      "Robert Bartlett" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5357 .
+
+    <#char=1054,1058>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1054 ;
+            fise:selection-context  "deal with Iran." ;
+            fise:selected-text      "Iran" ;
+            fise:end                1058 .
+
+    <#_248>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "undecided lawmakers" .
+
+    <#char=6220,6230>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "MISC" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              6220 ;
+            fise:selection-context  "of the Democratic lawmakers who" ;
+            fise:selected-text      "Democratic" ;
+            fise:end                6230 .
+
+    <#char=3468,3472>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3468 ;
+            fise:selection-context  "That may explain" ;
+            fise:selected-text      "That" ;
+            fise:end                3472 .
+
+    <#char=3608,3611>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3608 ;
+            fise:selection-context  "process is you're not" ;
+            fise:selected-text      "you" ;
+            fise:end                3611 .
+
+    <#_198>  dcterms:relation    <#char=5245,5249> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "Army" .
+
+    <#char=2893,2900>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "ORGANIZATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              2893 ;
+            fise:selection-context  "of former Defense Secretary Donald" ;
+            fise:selected-text      "Defense" ;
+            fise:end                2900 .
+
+    <#char=3956,3958>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3956 ;
+            fise:selection-context  "level because it really is" ;
+            fise:selected-text      "it" ;
+            fise:end                3958 .
+
+    <#_91>  dcterms:relation     <#char=2774,2791> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "United for Change" .
+
+    <#_70>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "lobbyists" .
+
+    <#_49>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "each chamber to override a presidential veto" .
+
+    <#_114>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the new agreement that would help stop war with Iran" .
+
+    <#_28>  dcterms:relation     <#char=1279,1284> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "LOCATION" ;
+            fise:entity-label    "D-Mo." .
+
+    <#dbpedia-Augusto_Pinochet>
+            fise:entity-type       schema:Person ;
+            fise:entity-type       schema:Thing ;
+            dcterms:relation       <#char=1112,1118> ;
+            fise:entity-label      "Augusto Pinochet"@en ;
+            rdf:type               fise:EntityAnnotation ;
+            fise:extracted-from    <> ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Augusto_Pinochet/> ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime ;
+            fise:confidence-level  "0.055003297"^^xsd:float .
+
+    <#char=4104,4114>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "MISC" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              4104 ;
+            fise:selection-context  ", a pro-Israel group helping" ;
+            fise:selected-text      "pro-Israel" ;
+            fise:end                4114 .
+
+    <#_214>  rdf:type            fise:EntityAnnotation ;
+            dcterms:relation     <#char=5566,5568> ;
+            dcterms:relation     <#char=5598,5600> ;
+            fise:extracted-from  <> ;
+            dcterms:relation     <#char=5489,5490> ;
+            dcterms:relation     <#char=5357,5372> ;
+            dcterms:relation     <#char=5589,5591> ;
+            dcterms:relation     <#char=5531,5533> ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            dcterms:creator      "StanfordNER" ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Robert Bartlett" .
+
+    <#_8>   dcterms:relation     <#char=747,759> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Ernest Moniz" .
+
+    <#_185>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "Israeli security experts" .
+
+    <#_164>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "government affairs at J Street , a pro-Israel group helping to lead the pro-deal coalition" .
+
+    <#char=3500,3503>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "NUMBER" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3500 ;
+            fise:selection-context  "absence of one regular lobbying" ;
+            fise:selected-text      "one" ;
+            fise:end                3503 .
+
+    <#_57>  dcterms:relation     <#char=4399,4400> ;
+            dcterms:relation     <#char=4448,4450> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "YouTube" .
+
+    <#_122>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "international trade agreements" .
+
+    <#char=1261,1277>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1261 ;
+            fise:selection-context  "Sen. Claire McCaskill, D-Mo." ;
+            fise:selected-text      "Claire McCaskill" ;
+            fise:end                1277 .
+
+    <#_36>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a resolution to disapprove it next month" .
+
+    <#_101>  dcterms:relation    <#char=3057,3061> ;
+            dcterms:relation     <#char=3147,3151> ;
+            dcterms:relation     <#char=5389,5393> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "LOCATION" ;
+            fise:entity-label    "Iraq" .
+
+    <#_15>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "President Obama 's nuclear deal" .
+
+    <#_243>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the entire Obama administration" .
+
+    <#_201>  dcterms:relation    <#char=5171,5199> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "American Security Initiative" .
+
+    <#_86>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "terrorists getting ahold of a nuclear weapon" .
+
+    <#_65>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a group with ties to the powerful American Israel Public Affairs Committee" .
+
+    <#_130>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "one regular lobbying activity" .
+
+    <#char=2071,2111>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "ORGANIZATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              2071 ;
+            fise:selection-context  "the powerful American Israel Public Affairs Committee, released" ;
+            fise:selected-text      "American Israel Public Affairs Committee" ;
+            fise:end                2111 .
+
+    <#char=1112,1118>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "DATE" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1112 ;
+            fise:selection-context  "for the August recess," ;
+            fise:selected-text      "August" ;
+            fise:end                1118 .
+
+    <#_251>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the anti-deal coalition" .
+
+    <#char=702,712>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              702 ;
+            fise:selection-context  "of State John Kerry talks to" ;
+            fise:selected-text      "John Kerry" ;
+            fise:end                712 .
+
+    <#_230>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the scars" .
+
+    <#_3>   fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "The Airwaves" .
+
+    <#_180>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "validators in its messages" .
+
+    <#_94>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the coalition supporting the deal" .
+
+    <#_73>  dcterms:relation     <#char=2206,2215> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "Air Force" .
+
+    <#_138>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a money connection" .
+
+    <#char=2206,2215>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "ORGANIZATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              2206 ;
+            fise:selection-context  ", retired Air Force Lt. Gen." ;
+            fise:selected-text      "Air Force" ;
+            fise:end                2215 .
+
+    <#_117>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "raw numbers of lobbyists and dollars" .
+
+    <#_31>  dcterms:relation     <#char=1261,1277> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Claire McCaskill" .
+
+    <#_10>  dcterms:relation     <#char=875,891> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Carlos Barria/AP" .
+
+    <#char=1342,1350>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "ORGANIZATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1342 ;
+            fise:selection-context  "leaders in Congress bring up" ;
+            fise:selected-text      "Congress" ;
+            fise:end                1350 .
+
+    <#char=3213,3217>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3213 ;
+            fise:selection-context  "war with Iran.\"" ;
+            fise:selected-text      "Iran" ;
+            fise:end                3217 .
+
+    <#_167>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a pro-Israel group helping to lead the pro-deal coalition" .
+
+    <#_81>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "terrorism in the world" .
+
+    <#_60>  dcterms:relation     <#char=2206,2215> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "Air Force" .
+
+    <#dbpedia-Norm_Coleman>
+            fise:entity-type       schema:Person ;
+            dcterms:relation       <#char=5814,5821> ;
+            fise:entity-label      "Norm Coleman"@en ;
+            dcterms:relation       <#char=6147,6154> ;
+            rdf:type               fise:EntityAnnotation ;
+            fise:extracted-from    <> ;
+            dcterms:relation       <#char=5969,5976> ;
+            dcterms:relation       <#char=3555,3567> ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Norm_Coleman/> ;
+            dcterms:relation       <#char=5122,5129> ;
+            fise:entity-type       schema:Thing ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            fise:confidence-level  "0.0480791"^^xsd:float ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime .
+
+    <#_125>  dcterms:relation    <#char=3500,3503> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "NUMBER" ;
+            fise:entity-label    "one" .
+
+    <#char=3090,3094>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3090 ;
+            fise:selection-context  ": \"They're back" ;
+            fise:selected-text      "They" ;
+            fise:end                3094 .
+
+    <#char=5871,5875>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5871 ;
+            fise:selection-context  ", but they're up" ;
+            fise:selected-text      "they" ;
+            fise:end                5875 .
+
+    <#dbpedia-John_Kerry>
+            rdf:type               fise:EntityAnnotation ;
+            dcterms:relation       <#char=702,712> ;
+            fise:entity-type       schema:Person ;
+            fise:extracted-from    <> ;
+            fise:entity-label      "John Kerry"@en ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/John_Kerry/> ;
+            fise:entity-type       schema:Thing ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime ;
+            fise:confidence-level  "0.08021867"^^xsd:float .
+
+    <#_39>  dcterms:relation     <#char=1449,1452> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "NUMBER" ;
+            fise:entity-label    "one" .
+
+    <#_104>  dcterms:relation    <#char=3090,3094> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "former United Nations Ambassador John Bolton and former Vice President Dick Cheney -- all proponents of the 2003 assault on Iraq -- an announcer" .
+
+    <#_18>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "lawmakers home" .
+
+    <#char=5122,5129>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5122 ;
+            fise:selection-context  "Coleman is co-founder" ;
+            fise:selected-text      "Coleman" ;
+            fise:end                5129 .
+
+    <#char=4035,4049>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              4035 ;
+            fise:selection-context  "\" said Dylan Williams, vice" ;
+            fise:selected-text      "Dylan Williams" ;
+            fise:end                4049 .
+
+    <#_246>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "no balance" .
+
+    <#dbpedia-United_States_Congress>
+            dcterms:relation       <#char=1342,1350> ;
+            dcterms:relation       <#char=1496,1504> ;
+            fise:extracted-from    <> ;
+            fise:entity-reference  <http://dbpedia.org/resource/United_States_Congress> ;
+            fise:entity-label      "United States Congress"@en ;
+            rdf:type               fise:EntityAnnotation ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime ;
+            fise:confidence-level  "0.089913435"^^xsd:float .
+
+    <#_204>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a retired Army staff sergeant" .
+
+    <#geonames-130758>  dcterms:relation  <#char=3847,3851> ;
+            dcterms:relation       <#char=2352,2356> ;
+            dcterms:relation       <#char=11,15> ;
+            dcterms:relation       <#char=767,771> ;
+            dcterms:relation       <#char=5419,5423> ;
+            rdf:type               fise:EntityAnnotation ;
+            dcterms:relation       <#char=1054,1058> ;
+            fise:extracted-from    <> ;
+            fise:entity-type       schema:Place ;
+            fise:entity-type       schema:Thing ;
+            dcterms:relation       <#char=3213,3217> ;
+            dcterms:relation       <#char=3903,3907> ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/sws.geonames.org/130758/> ;
+            dcterms:creator        "ClavinEnhancementEngine" ;
+            fise:entity-label      "Iran" ;
+            dcterms:created        "2015-10-27T01:21:47.501Z"^^xsd:dateTime .
+
+    <#_175>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the dollar advantage that opponents of this deal have" .
+
+    <#_154>  dcterms:relation    <#char=4104,4114> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "MISC" ;
+            fise:entity-label    "pro-Israel" .
+
+    <#_68>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "an ad" .
+
+    <#_133>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "R-Minn." .
+
+    <#char=4002,4005>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "NUMBER" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              4002 ;
+            fise:selection-context  "fight between two competing world" ;
+            fise:selected-text      "two" ;
+            fise:end                4005 .
+
+    <#_112>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "The same people that rushed us into war in Iraq" .
+
+    <#_26>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "legislators '" .
+
+    <#char=3057,3061>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3057 ;
+            fise:selection-context  "assault on Iraq &mdash; an" ;
+            fise:selected-text      "Iraq" ;
+            fise:end                3061 .
+
+    <#char=5419,5423>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5419 ;
+            fise:selection-context  "period when Iran reportedly began" ;
+            fise:selected-text      "Iran" ;
+            fise:end                5423 .
+
+    <#char=1028,1033>  schema:employee  <#char=990,998> ;
+            rdf:type                fise:TextAnnotation ;
+            fise:extracted-from     <> ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            fise:end                1033 ;
+            fise:selected-text      "Obama" ;
+            fise:start              1028 ;
+            fise:selection-context  "on President Obama's nuclear" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime .
+
+    <#char=3132,3134>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3132 ;
+            fise:selection-context  "that rushed us into war" ;
+            fise:selected-text      "us" ;
+            fise:end                3134 .
+
+    <#char=2333,2335>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              2333 ;
+            fise:selection-context  "\"Let's not forget" ;
+            fise:selected-text      "'s" ;
+            fise:end                2335 .
+
+    <#_212>  dcterms:relation    <#char=5465,5471> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "MISC" ;
+            fise:entity-label    "Shiite" .
+
+    <#_6>   dcterms:relation     <#char=702,712> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "John Kerry" .
+
+    <#char=2911,2926>  schema:employee  <#char=2893,2900> ;
+            rdf:type                fise:TextAnnotation ;
+            fise:extracted-from     <> ;
+            fise:start              2911 ;
+            dcterms:type            "PERSON" ;
+            fise:end                2926 ;
+            fise:selected-text      "Donald Rumsfeld" ;
+            dcterms:creator         "StanfordNER" ;
+            fise:selection-context  "Defense Secretary Donald Rumsfeld, former" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime .
+
+    <#_183>  dcterms:relation    <#char=4782,4784> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "its current spot" .
+
+    <#_97>  dcterms:relation     <#char=2893,2900> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "Defense" .
+
+    <#_162>  dcterms:relation    <#char=5738,5746> ;
+            dcterms:relation     <#char=4035,4049> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Dylan Williams" .
+
+    <#_76>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "intelligence , surveillance and reconnaissance" .
+
+    <#_55>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "almost all of them" .
+
+    <#_120>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the Affordable Care Act , for instance , or international trade agreements" .
+
+    <#_13>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "A lobbying battle" .
+
+    <#char=2128,2136>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "DATE" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              2128 ;
+            fise:selection-context  "an ad Thursday with what" ;
+            fise:selected-text      "Thursday" ;
+            fise:end                2136 .
+
+    <#_241>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "money for lobbying" .
+
+    <#char=3739,3742>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3739 ;
+            fise:selection-context  "not, you know," ;
+            fise:selected-text      "you" ;
+            fise:end                3742 .
+
+    <#_220>  dcterms:relation    <#char=5524,5526> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "an Iranian bomb" .
+
+    <#_191>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "The anti-deal coalition counters J Street 's validators with veterans ." .
+
+    <#_149>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the fight over the Iran deal" .
+
+    <#_63>  dcterms:relation     <#char=2018,2035> ;
+            dcterms:relation     <#char=2333,2335> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "Nuclear Free Iran" .
+
+    <#_128>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the absence of one regular lobbying activity , as noted by former Sen. Norm Coleman , R-Minn." .
+
+    <#char=2774,2791>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "ORGANIZATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              2774 ;
+            fise:selection-context  "Americans United for Change, a" ;
+            fise:selected-text      "United for Change" ;
+            fise:end                2791 .
+
+    <#_107>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the 2003 assault" .
+
+    <#_21>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "TV ads , telephone congressional offices" .
+
+    <#char=2225,2238>  rdf:type     fise:TextAnnotation ;
+            schema:employee         <#char=2206,2215> ;
+            fise:extracted-from     <> ;
+            fise:start              2225 ;
+            dcterms:creator         "StanfordNER" ;
+            fise:selection-context  "Lt. Gen. David Deptula, a" ;
+            fise:end                2238 ;
+            dcterms:type            "PERSON" ;
+            fise:selected-text      "David Deptula" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime .
+
+    <#char=2018,2035>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "ORGANIZATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              2018 ;
+            fise:selection-context  "for a Nuclear Free Iran, a" ;
+            fise:selected-text      "Nuclear Free Iran" ;
+            fise:end                2035 .
+
+    <#char=5566,5568>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5566 ;
+            fise:selection-context  "corner of my temple down" ;
+            fise:selected-text      "my" ;
+            fise:end                5568 .
+
+    <#_207>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "another group , Veterans Against the Deal" .
+
+    <#_1>   fise:extracted-from  <> ;
+            dcterms:relation     <#char=11,15> ;
+            dcterms:relation     <#char=2352,2356> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:relation     <#char=3847,3851> ;
+            dcterms:relation     <#char=5419,5423> ;
+            dcterms:relation     <#char=3213,3217> ;
+            dcterms:relation     <#char=767,771> ;
+            dcterms:relation     <#char=3903,3907> ;
+            dcterms:relation     <#char=1054,1058> ;
+            fise:entity-label    "Iran" ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "LOCATION" .
+
+    <#_178>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a vote advantage" .
+
+    <#_92>  dcterms:relation     <#char=2774,2791> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "United for Change" .
+
+    <#_157>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "that kind of a level" .
+
+    <#char=5489,5490>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5489 ;
+            fise:selection-context  "\"I was blown" ;
+            fise:selected-text      "I" ;
+            fise:end                5490 .
+
+    <#_71>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a `` validator '' -- in this case , retired Air Force Lt. Gen. David Deptula , a former deputy chief of staff for intelligence , surveillance and reconnaissance" .
+
+    <#char=3729,3731>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3729 ;
+            fise:selection-context  "I mean it's not" ;
+            fise:selected-text      "it" ;
+            fise:end                3731 .
+
+    <#_136>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "fundraisers for members" .
+
+    <#_50>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a presidential veto" .
+
+    <#_115>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "stop war with Iran" .
+
+    <#_29>  dcterms:relation     <#char=1320,1330> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "MISC" ;
+            fise:entity-label    "Republican" .
+
+    <#_215>  dcterms:relation    <#char=5397,5401> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "DATE" ;
+            fise:entity-label    "2005" .
+
+    <#_9>   fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "Iran nuclear deal negotiations" .
+
+    <#geonames-99237>  rdf:type    fise:EntityAnnotation ;
+            fise:entity-type       schema:Thing ;
+            dcterms:relation       <#char=5389,5393> ;
+            fise:extracted-from    <> ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/sws.geonames.org/99237/> ;
+            dcterms:relation       <#char=3057,3061> ;
+            dcterms:relation       <#char=3147,3151> ;
+            fise:entity-type       schema:Place ;
+            fise:entity-label      "Iraq" ;
+            dcterms:creator        "ClavinEnhancementEngine" ;
+            dcterms:created        "2015-10-27T01:21:47.501Z"^^xsd:dateTime .
+
+    <#_186>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the best existing option , the best possible alternative" .
+
+    <#_165>  dcterms:relation    <#char=4104,4114> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "MISC" ;
+            fise:entity-label    "pro-Israel" .
+
+    <#_144>  dcterms:relation    <#char=3749,3751> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "we" .
+
+    <#_58>  dcterms:relation     <#char=2018,2035> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "Nuclear Free Iran" .
+
+    <#_123>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "corporations" .
+
+    <#_102>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "photos of former Defense Secretary Donald Rumsfeld" .
+
+    <#_16>  dcterms:relation     <#char=1443,1448> ;
+            dcterms:relation     <#char=1028,1033> ;
+            dcterms:relation     <#char=5901,5906> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Obama" .
+
+    <#_223>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the left corner of my temple down through my jaw" .
+
+    <#_194>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "veterans" .
+
+    <#char=3749,3751>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3749 ;
+            fise:selection-context  "know, we're going" ;
+            fise:selected-text      "we" ;
+            fise:end                3751 .
+
+    <#_173>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the ad campaigns" .
+
+    <#char=1387,1389>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1387 ;
+            fise:selection-context  "to disapprove it next month" ;
+            fise:selected-text      "it" ;
+            fise:end                1389 .
+
+    <#_87>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "ahold of a nuclear weapon" .
+
+    <#_152>  dcterms:relation    <#char=4002,4005> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "NUMBER" ;
+            fise:entity-label    "two" .
+
+    <#_66>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "ties to the powerful American Israel Public Affairs Committee" .
+
+    <#_131>  dcterms:relation    <#char=3555,3567> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Norm Coleman" .
+
+    <#char=2961,2972>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            schema:employee         <#char=2935,2949> ;
+            fise:end                2972 ;
+            dcterms:creator         "StanfordNER" ;
+            fise:start              2961 ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:selected-text      "John Bolton" ;
+            dcterms:type            "PERSON" ;
+            fise:selection-context  "Nations Ambassador John Bolton and former" .
+
+    <#_24>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "social media" .
+
+    <#char=4782,4784>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              4782 ;
+            fise:selection-context  "It must not" ;
+            fise:selected-text      "It" ;
+            fise:end                4784 .
+
+    <#_252>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "some of the Democratic lawmakers who have already endorsed the deal" .
+
+    <#_231>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "this" .
+
+    <#char=1279,1284>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1279 ;
+            fise:selection-context  "McCaskill, D-Mo., says" ;
+            fise:selected-text      "D-Mo." ;
+            fise:end                1284 .
+
+    <#char=722,726>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              722 ;
+            fise:selection-context  "talks to U.S. Secretary of" ;
+            fise:selected-text      "U.S." ;
+            fise:end                726 .
+
+    <#_181>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "its messages" .
+
+    <#char=875,891>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              875 ;
+            fise:selection-context  "Carlos Barria/AP" ;
+            fise:selected-text      "Carlos Barria/AP" ;
+            fise:end                891 .
+
+    <#_139>  dcterms:relation    <#char=3729,3731> ;
+            dcterms:relation     <#char=3819,3821> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "an education connection" .
+
+    <#_74>  dcterms:relation     <#char=2206,2215> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "Air Force" .
+
+    <#char=5171,5199>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "ORGANIZATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5171 ;
+            fise:selection-context  ", the American Security Initiative, that" ;
+            fise:selected-text      "American Security Initiative" ;
+            fise:end                5199 .
+
+    <#char=4399,4400>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              4399 ;
+            fise:selection-context  "\"I think that" ;
+            fise:selected-text      "I" ;
+            fise:end                4400 .
+
+    <#char=3147,3151>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3147 ;
+            fise:selection-context  "war in Iraq want to" ;
+            fise:selected-text      "Iraq" ;
+            fise:end                3151 .
+
+    <#_32>  dcterms:relation     <#char=1261,1277> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Claire McCaskill" .
+
+    <#char=2935,2949>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "ORGANIZATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              2935 ;
+            fise:selection-context  ", former United Nations Ambassador John" ;
+            fise:selected-text      "United Nations" ;
+            fise:end                2949 .
+
+    <#_11>  dcterms:relation     <#char=1496,1504> ;
+            dcterms:relation     <#char=1531,1533> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:relation     <#char=1342,1350> ;
+            fise:extracted-from  <> ;
+            dcterms:relation     <#char=990,998> ;
+            dcterms:relation     <#char=1387,1389> ;
+            dcterms:creator      "StanfordNER" ;
+            fise:entity-label    "Congress" ;
+            fise:entity-type     "ORGANIZATION" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime .
+
+    <#dbpedia-Israel>  fise:entity-reference  <http://localhost:8080/api/v2/resource/sws.geonames.org/294640/> ;
+            fise:extracted-from    <> ;
+            fise:entity-label      "Israel"@en ;
+            fise:entity-type       schema:Country ;
+            fise:entity-type       schema:Place ;
+            fise:entity-type       schema:Thing ;
+            dcterms:relation       <#char=4678,4685> ;
+            fise:entity-type       schema:AdministrativeArea ;
+            rdf:type               fise:EntityAnnotation ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime ;
+            fise:confidence-level  "0.06668865"^^xsd:float ;
+            dcterms:creator        "DBpediaEnhancementEngine" .
+
+    <#_218>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "explosives" .
+
+    <#char=1320,1330>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "MISC" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1320 ;
+            fise:selection-context  "deal when Republican leaders in" ;
+            fise:selected-text      "Republican" ;
+            fise:end                1330 .
+
+    <#char=678,682>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              678 ;
+            fise:selection-context  "U.S. Secretary of" ;
+            fise:selected-text      "U.S." ;
+            fise:end                682 .
+
+    <#_168>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the pro-deal coalition" .
+
+    <#_82>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the world" .
+
+    <#_61>  dcterms:relation     <#char=2225,2238> ;
+            dcterms:relation     <#char=2414,2421> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "David Deptula" .
+
+    <#char=1531,1533>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1531 ;
+            fise:selection-context  "measure, it would still" ;
+            fise:selected-text      "it" ;
+            fise:end                1533 .
+
+    <#_126>  dcterms:relation    <#char=5969,5976> ;
+            dcterms:relation     <#char=5814,5821> ;
+            dcterms:relation     <#char=5122,5129> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:relation     <#char=3555,3567> ;
+            dcterms:relation     <#char=5827,5830> ;
+            fise:extracted-from  <> ;
+            dcterms:relation     <#char=6147,6154> ;
+            dcterms:creator      "StanfordNER" ;
+            fise:entity-label    "Norm Coleman" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" .
+
+    <#_40>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "Her announcement" .
+
+    <#char=5901,5906>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5901 ;
+            fise:selection-context  "the entire Obama administration." ;
+            fise:selected-text      "Obama" ;
+            fise:end                5906 .
+
+    <#_105>  dcterms:relation    <#char=2935,2949> ;
+            dcterms:relation     <#char=3739,3742> ;
+            dcterms:relation     <#char=3608,3611> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "United Nations" .
+
+    <#dbpedia-Donald_Rumsfeld>
+            fise:extracted-from    <> ;
+            fise:entity-type       schema:Thing ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Donald_Rumsfeld/> ;
+            fise:entity-type       schema:Person ;
+            rdf:type               fise:EntityAnnotation ;
+            dcterms:relation       <#char=2911,2926> ;
+            fise:entity-label      "Donald Rumsfeld"@en ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            fise:confidence-level  "0.09443369"^^xsd:float .
+
+    <#_19>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the August recess" .
+
+    <#char=1409,1412>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1409 ;
+            fise:selection-context  "Her announcement brings" ;
+            fise:selected-text      "Her" ;
+            fise:end                1412 .
+
+    <#char=5589,5591>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5589 ;
+            fise:selection-context  "down through my jaw," ;
+            fise:selected-text      "my" ;
+            fise:end                5591 .
+
+    <#_247>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "The ranks of undecided lawmakers" .
+
+    <#_226>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "my jaw" .
+
+    <#char=2999,3010>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              2999 ;
+            fise:selection-context  "Vice President Dick Cheney &mdash; all" ;
+            fise:selected-text      "Dick Cheney" ;
+            fise:end                3010 .
+
+    <#dbpedia-Patient_Protection_and_Affordable_Care_Act>
+            dcterms:relation       <#char=3348,3367> ;
+            fise:extracted-from    <> ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Patient_Protection_and_Affordable_Care_Act/> ;
+            fise:entity-label      "Patient Protection and Affordable Care Act"@en ;
+            rdf:type               fise:EntityAnnotation ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime ;
+            fise:confidence-level  "0.083243005"^^xsd:float .
+
+    <#_176>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "opponents of this deal" .
+
+    <#_90>  dcterms:relation     <#char=2935,2949> ;
+            dcterms:relation     <#char=2774,2791> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "United Nations" .
+
+    <#_155>  dcterms:relation    <#char=3956,3958> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a once-in-a-decade fight between two competing world views" .
+
+    <#char=3555,3567>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3555 ;
+            fise:selection-context  "former Sen. Norm Coleman, R-Minn." ;
+            fise:selected-text      "Norm Coleman" ;
+            fise:end                3567 .
+
+    <#_69>  dcterms:relation     <#char=2128,2136> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "DATE" ;
+            fise:entity-label    "Thursday" .
+
+    <#_134>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "The difference in process" .
+
+    <#char=990,998>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "ORGANIZATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              990 ;
+            fise:selection-context  "members of Congress prepare to" ;
+            fise:selected-text      "Congress" ;
+            fise:end                998 .
+
+    <#_48>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a two-thirds majority" .
+
+    <#_113>  dcterms:relation    <#char=3132,3134> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "us" .
+
+    <#_27>  dcterms:relation     <#char=1261,1277> ;
+            dcterms:relation     <#char=1291,1294> ;
+            dcterms:relation     <#char=1409,1412> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Claire McCaskill" .
+
+    <#char=4659,4662>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              4659 ;
+            fise:selection-context  "According to its current spot" ;
+            fise:selected-text      "its" ;
+            fise:end                4662 .
+
+    <#char=5465,5471>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "MISC" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5465 ;
+            fise:selection-context  "explosives to Shiite militia." ;
+            fise:selected-text      "Shiite" ;
+            fise:end                5471 .
+
+    <#char=4448,4450>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              4448 ;
+            fise:selection-context  ",\" he said of" ;
+            fise:selected-text      "he" ;
+            fise:end                4450 .
+
+    <#_213>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "The sergeant , Robert Bartlett" .
+
+    <#_7>   fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "U.S. Secretary of Energy Ernest Moniz" .
+
+    <#geonames-6252001>  rdf:type  fise:EntityAnnotation ;
+            dcterms:relation       <#char=678,682> ;
+            fise:extracted-from    <> ;
+            dcterms:relation       <#char=722,726> ;
+            fise:entity-type       schema:Place ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/sws.geonames.org/6252001/> ;
+            fise:entity-type       schema:Thing ;
+            dcterms:created        "2015-10-27T01:21:47.501Z"^^xsd:dateTime ;
+            fise:entity-label      "United States" ;
+            dcterms:creator        "ClavinEnhancementEngine" .
+
+    <#_98>  dcterms:relation     <#char=2911,2926> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "Donald Rumsfeld" .
+
+    <#char=3819,3821>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3819 ;
+            fise:selection-context  "But it makes the" ;
+            fise:selected-text      "it" ;
+            fise:end                3821 .
+
+    <#char=1496,1504>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "ORGANIZATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1496 ;
+            fise:selection-context  "If Congress were to" ;
+            fise:selected-text      "Congress" ;
+            fise:end                1504 .
+
+    <#_56>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "viewers" .
+
+    <#_121>  dcterms:relation    <#char=3348,3367> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "MISC" ;
+            fise:entity-label    "Affordable Care Act" .
+
+    <#char=5598,5600>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5598 ;
+            fise:selection-context  ",\" he says in" ;
+            fise:selected-text      "he" ;
+            fise:end                5600 .
+
+    <#_35>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "Republican leaders in Congress" .
+
+    <#_100>  dcterms:relation    <#char=2961,2972> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "PERSON" ;
+            fise:entity-label    "John Bolton" .
+
+    <#char=5245,5249>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "ORGANIZATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5245 ;
+            fise:selection-context  "a retired Army staff sergeant" ;
+            fise:selected-text      "Army" ;
+            fise:end                5249 .
+
+    <#_14>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "members of Congress" .
+
+    <#char=5389,5393>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5389 ;
+            fise:selection-context  "wounded in Iraq in 2005" ;
+            fise:selected-text      "Iraq" ;
+            fise:end                5393 .
+
+    <#_200>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a bipartisan group , the American Security Initiative , that has produced an ad featuring a retired Army staff sergeant" .
+
+    <#_192>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "J Street 's validators with veterans" .
+
+    <#char=2352,2356>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              2352 ;
+            fise:selection-context  "forget that Iran is the" ;
+            fise:selected-text      "Iran" ;
+            fise:end                2356 .
+
+    <#_85>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the likelihood of terrorists getting ahold of a nuclear weapon" .
+
+    <#_171>  dcterms:relation    <#char=4482,4486> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "saturation point" .
+
+    <#char=5510,5517>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "MISC" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5510 ;
+            fise:selection-context  "by an Iranian bomb." ;
+            fise:selected-text      "Iranian" ;
+            fise:end                5517 .
+
+    <#char=1443,1448>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1443 ;
+            fise:selection-context  "brings President Obama one vote" ;
+            fise:selected-text      "Obama" ;
+            fise:end                1448 .
+
+    <#_150>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the Iran deal" .
+
+    <#_64>  dcterms:relation     <#char=2018,2035> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "Nuclear Free Iran" .
+
+    <#_129>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "one regular lobbying activity , as noted by former Sen. Norm Coleman , R-Minn." .
+
+    <#_43>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "one vote" .
+
+    <#char=5969,5976>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5969 ;
+            fise:selection-context  ",\" Coleman said." ;
+            fise:selected-text      "Coleman" ;
+            fise:end                5976 .
+
+    <#_108>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "an announcer" .
+
+    <#_22>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "telephone congressional offices" .
+
+    <#char=4627,4630>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              4627 ;
+            fise:selection-context  "validators in its messages," ;
+            fise:selected-text      "its" ;
+            fise:end                4630 .
+
+    <#_250>  dcterms:relation    <#char=6220,6230> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "MISC" ;
+            fise:entity-label    "Democratic" .
+
+    <#char=1291,1294>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1291 ;
+            fise:selection-context  ", says she'll support" ;
+            fise:selected-text      "she" ;
+            fise:end                1294 .
+
+    <#_208>  dcterms:relation    <#char=5309,5334> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "Veterans Against the Deal" .
+
+    <#char=5814,5821>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5814 ;
+            fise:selection-context  "Coleman said his" ;
+            fise:selected-text      "Coleman" ;
+            fise:end                5821 .
+
+    <#_2>   dcterms:relation     <#char=11,15> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "LOCATION" ;
+            fise:entity-label    "Iran" .
+
+    <#char=3348,3367>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "MISC" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3348 ;
+            fise:selection-context  "&mdash; the Affordable Care Act, for" ;
+            fise:selected-text      "Affordable Care Act" ;
+            fise:end                3367 .
+
+    <#char=4482,4486>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              4482 ;
+            fise:selection-context  "\"And that's why" ;
+            fise:selected-text      "that" ;
+            fise:end                4486 .
+
+    <#char=5531,5533>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              5531 ;
+            fise:selection-context  "It cut me in half" ;
+            fise:selected-text      "me" ;
+            fise:end                5533 .
+
+    <#_158>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a level" .
+
+    <#dbpedia-United_Nations>
+            dcterms:relation       <#char=2935,2949> ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/United_Nations/> ;
+            fise:entity-label      "United Nations"@en ;
+            rdf:type               fise:EntityAnnotation ;
+            fise:entity-type       schema:Thing ;
+            fise:extracted-from    <> ;
+            fise:entity-type       schema:Organization ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            fise:confidence-level  "0.07320977"^^xsd:float ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime .
+
+    <#_72>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "this case" .
+
+    <#char=3722,3723>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3722 ;
+            fise:selection-context  "I mean it" ;
+            fise:selected-text      "I" ;
+            fise:end                3723 .
+
+    <#char=2414,2421>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              2414 ;
+            fise:selection-context  ",\" Deptula says in" ;
+            fise:selected-text      "Deptula" ;
+            fise:end                2421 .
+
+    <#_51>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "TV ads both for and against the deal" .
+
+    <#_116>  dcterms:relation    <#char=3348,3367> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "MISC" ;
+            fise:entity-label    "Affordable Care Act" .
+
+    <#dbpedia-Iran>  dcterms:relation  <#char=5419,5423> ;
+            dcterms:relation       <#char=2352,2356> ;
+            rdf:type               fise:EntityAnnotation ;
+            fise:entity-type       schema:Thing ;
+            dcterms:relation       <#char=1054,1058> ;
+            dcterms:relation       <#char=11,15> ;
+            fise:extracted-from    <> ;
+            dcterms:relation       <#char=3213,3217> ;
+            fise:entity-label      "Iran"@en ;
+            fise:entity-type       schema:Place ;
+            fise:entity-type       schema:AdministrativeArea ;
+            dcterms:relation       <#char=3847,3851> ;
+            fise:entity-type       schema:Country ;
+            dcterms:relation       <#char=3903,3907> ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/sws.geonames.org/130758/> ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            fise:confidence-level  "0.10259008"^^xsd:float .
+
+    <#char=1449,1452>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "NUMBER" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              1449 ;
+            fise:selection-context  "President Obama one vote closer" ;
+            fise:selected-text      "one" ;
+            fise:end                1452 .
+
+    <#char=6147,6154>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "PERSON" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              6147 ;
+            fise:selection-context  "Coleman said the" ;
+            fise:selected-text      "Coleman" ;
+            fise:end                6154 .
+
+    <#dbpedia-Republican_Party_(United_States)>
+            fise:entity-label      "Republican Party (United States)"@en ;
+            fise:extracted-from    <> ;
+            dcterms:relation       <#char=1320,1330> ;
+            fise:entity-type       schema:Organization ;
+            rdf:type               fise:EntityAnnotation ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Republican_Party_(United_States)/> ;
+            fise:entity-type       schema:Thing ;
+            fise:confidence-level  "0.06885388"^^xsd:float ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime .
+
+    <#char=3847,3851>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "LOCATION" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              3847 ;
+            fise:selection-context  "over the Iran deal no" ;
+            fise:selected-text      "Iran" ;
+            fise:end                3851 .
+
+    <#_216>  dcterms:relation    <#char=5397,5401> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "DATE" ;
+            fise:entity-label    "2005" .
+
+    <#_166>  dcterms:relation    <#char=4659,4662> ;
+            dcterms:relation     <#char=4627,4630> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "J Street 's" .
+
+    <#_80>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "the largest state sponsor of terrorism in the world" .
+
+    <#_145>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a fundraiser" .
+
+    <#dbpedia-Shia_Islam>
+            dcterms:relation       <#char=5465,5471> ;
+            fise:extracted-from    <> ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Shia_Islam/> ;
+            fise:entity-label      "Shia Islam"@en ;
+            rdf:type               fise:EntityAnnotation ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime ;
+            fise:confidence-level  "0.061728667"^^xsd:float .
+
+    <#_59>  dcterms:relation     <#char=2071,2111> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "American Israel Public Affairs Committee" .
+
+    <#_124>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "big stakes" .
+
+    <#_38>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "next month" .
+
+    <#_103>  dcterms:relation    <#char=2893,2900> ;
+            fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-type     "ORGANIZATION" ;
+            fise:entity-label    "Defense" .
+
+    <#_17>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "The lobbying" .
+
+    <#_245>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "a sitting administration" .
+
+    <#_224>  fise:extracted-from  <> ;
+            rdf:type             fise:EntityAnnotation ;
+            dcterms:creator      "StanfordNER" ;
+            dcterms:created      "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:entity-label    "my temple down through my jaw" .
+
+    <#dbpedia-Democratic_Party_(United_States)>
+            fise:entity-label      "Democratic Party (United States)"@en ;
+            dcterms:relation       <#char=6220,6230> ;
+            fise:entity-type       schema:Thing ;
+            fise:entity-reference  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Democratic_Party_(United_States)/> ;
+            fise:extracted-from    <> ;
+            fise:entity-type       schema:Organization ;
+            rdf:type               fise:EntityAnnotation ;
+            dcterms:created        "2015-10-27T01:53:55.896Z"^^xsd:dateTime ;
+            dcterms:creator        "DBpediaEnhancementEngine" ;
+            fise:confidence-level  "0.07083302"^^xsd:float .
+
+    <#char=4678,4685>  fise:extracted-from  <> ;
+            rdf:type                fise:TextAnnotation ;
+            dcterms:type            "MISC" ;
+            dcterms:creator         "StanfordNER" ;
+            dcterms:created         "2015-10-27T00:34:41.036Z"^^xsd:dateTime ;
+            fise:start              4678 ;
+            fise:selection-context  ", \"Israeli security experts" ;
+            fise:selected-text      "Israeli" ;
+            fise:end                4685 .
+    @prefix schema:  <http://schema.org/> .
+    @prefix rivium:  <http://rivium.bericotech.com/ontology#> .
+    @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix gn:  <http://www.geonames.org/ontology#> .
+    @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+    @prefix dcterms:  <http://purl.org/dc/terms/> .
+    @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix fise:  <http://fise.iks-project.eu/ontology/> .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Norm_Coleman/>
+            rivium:link  <http://localhost:8080/api/v2/resource/sws.geonames.org/6252001/> ;
+            rdfs:label   "Norm Coleman"@en ;
+            rivium:link  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Republican_Party_(United_States)/> ;
+            rdfs:label   "Norm Coleman"@es ;
+            rdfs:label   "Norm Coleman"@pl ;
+            rdfs:label   "Norm Coleman"@it ;
+            rdfs:label   "Norm Coleman"@de ;
+            rdfs:label   "Norm Coleman"@nl ;
+            rdfs:label   "Norm Coleman"@fr ;
+            rdfs:label   "ノーム・コールマン"@ja ;
+            rdfs:label   "Коулман, Норм"@ru .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Patient_Protection_and_Affordable_Care_Act/>
+            rivium:link  <http://localhost:8080/api/v2/resource/sws.geonames.org/6252001/> ;
+            rdfs:label   "Patient Protection and Affordable Care Act"@en ;
+            rdfs:label   "医療保険制度改革 (アメリカ)"@ja ;
+            rdfs:label   "Ley de Protección al Paciente y Cuidado de Salud Asequible"@es ;
+            rdfs:label   "Реформа здравоохранения и защиты пациентов в США"@ru ;
+            rdfs:label   "患者保护与平价医疗法案"@zh ;
+            rdfs:label   "Patient Protection and Affordable Care Act"@pt ;
+            rdfs:label   "Patient Protection and Affordable Care Act"@de ;
+            rdfs:label   "Patient Protection and Affordable Care Act"@nl ;
+            rdfs:label   "Patient Protection and Affordable Care Act"@fr .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Republican_Party_(United_States)/>
+            rdfs:label  "Republican Party (United States)"@en ;
+            rdfs:label  "Partia Republikańska (USA)"@pl ;
+            rdfs:label  "Republikeinse Partij (Verenigde Staten)"@nl ;
+            rdfs:label  "Partido Republicano (Estados Unidos)"@es ;
+            rdfs:label  "Partido Republicano (Estados Unidos)"@pt ;
+            rdfs:label  "共和党 (アメリカ)"@ja ;
+            rdfs:label  "الحزب الجمهوري (أمريكا)"@ar ;
+            rdfs:label  "Республиканская партия (США)"@ru ;
+            rdfs:label  "Republikanische Partei"@de ;
+            rdfs:label  "共和黨 (美國)"@zh ;
+            rdfs:label  "Partito Repubblicano (Stati Uniti d'America)"@it ;
+            rdfs:label  "Parti républicain (États-Unis)"@fr .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Democratic_Party_(United_States)/>
+            rivium:link  <http://localhost:8080/api/v2/resource/sws.geonames.org/6252001/> ;
+            rdfs:label   "Democratic Party (United States)"@en ;
+            rdfs:label   "民主党 (美国)"@zh ;
+            rdfs:label   "民主党 (アメリカ)"@ja ;
+            rdfs:label   "Демократическая партия (США)"@ru ;
+            rdfs:label   "Parti démocrate (États-Unis)"@fr ;
+            rdfs:label   "Partia Demokratyczna (USA)"@pl ;
+            rdfs:label   "Demokratische Partei (Vereinigte Staaten)"@de ;
+            rdfs:label   "Partido Democrata (Estados Unidos)"@pt ;
+            rdfs:label   "Partito Democratico (Stati Uniti d'America)"@it ;
+            rdfs:label   "حزب ديمقراطي (الولايات المتحدة)"@ar ;
+            rdfs:label   "Democratische Partij (Verenigde Staten)"@nl ;
+            rdfs:label   "Partido Demócrata (Estados Unidos)"@es .
+
+    <http://localhost:8080/api/v2/resource/sws.geonames.org/6252001/>
+            rdfs:label  "United States" .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/John_Kerry/>
+            rivium:link  <http://localhost:8080/api/v2/resource/sws.geonames.org/6252001/> ;
+            rdfs:label   "John Kerry"@en ;
+            rivium:link  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Democratic_Party_(United_States)/> ;
+            rdfs:label   "约翰·克里"@zh ;
+            rdfs:label   "Керри, Джон"@ru ;
+            rdfs:label   "John Kerry"@pl ;
+            rdfs:label   "John Kerry"@de ;
+            rdfs:label   "John Kerry"@es ;
+            rdfs:label   "John Kerry"@pt ;
+            rdfs:label   "John Kerry"@nl ;
+            rdfs:label   "John Kerry"@it ;
+            rdfs:label   "John Kerry"@fr ;
+            rdfs:label   "جون كيري"@ar ;
+            rdfs:label   "ジョン・ケリー"@ja .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Donald_Rumsfeld/>
+            rdfs:label   "Donald Rumsfeld"@en ;
+            rivium:link  <http://localhost:8080/api/v2/resource/sws.geonames.org/6252001/> ;
+            rivium:link  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Republican_Party_(United_States)/> ;
+            rdfs:label   "Рамсфелд, Дональд"@ru ;
+            rdfs:label   "Donald Rumsfeld"@it ;
+            rdfs:label   "Donald Rumsfeld"@pt ;
+            rdfs:label   "ドナルド・ラムズフェルド"@ja ;
+            rdfs:label   "唐纳德·拉姆斯菲尔德"@zh ;
+            rdfs:label   "دونالد رامسفيلد"@ar ;
+            rdfs:label   "Donald Rumsfeld"@de ;
+            rdfs:label   "Donald Rumsfeld"@pl ;
+            rdfs:label   "Donald Rumsfeld"@es ;
+            rdfs:label   "Donald Rumsfeld"@fr ;
+            rdfs:label   "Donald Rumsfeld"@nl .
+
+    <http://dbpedia.org/resource/United_States_Congress>
+            rivium:link  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Republican_Party_(United_States)/> ;
+            rivium:link  <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Democratic_Party_(United_States)/> .
+    @prefix schema:  <http://schema.org/> .
+    @prefix dbpedia-owl:  <http://dbpedia.org/ontology/> .
+    @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix rivium:  <http://rivium.bericotech.com/ontology#> .
+    @prefix gn:  <http://www.geonames.org/ontology#> .
+    @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+    @prefix dcterms:  <http://purl.org/dc/terms/> .
+    @prefix fise:  <http://fise.iks-project.eu/ontology/> .
+    @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Republican_Party_(United_States)/>
+            rdfs:label    "Republican Party (United States)"@en ;
+            rdfs:comment  "The Republican Party, commonly referred to as the GOP (abbreviation for Grand Old Party), is one of the two major contemporary political parties in the United States, the other being its historic rival the Democratic Party.Founded by anti-slavery activists in 1854, the GOP dominated politics nationally and in most of the North for most of the period from 1860 to 1932."@en ;
+            rdfs:comment  "The Republican Party, commonly referred to as the GOP (abbreviation for Grand Old Party), is one of the two major contemporary political parties in the United States, the other being its historic rival the Democratic Party.Founded by anti-slavery activists in 1854, the GOP dominated politics nationally and in most of the North for most of the period from 1860 to 1932. There have been 18 Republican presidents, the first being Abraham Lincoln, who served from 1861 until his assassination in 1865, and the most recent being George W. Bush, who served two full four-year terms 2001 to 2009. The most recent Republican presidential nominee was former Massachusetts governor Mitt Romney who lost in 2012.The party's platform is generally based on American conservatism, in contrast to the contemporary American liberalism of the rival Democratic Party. The Republican Party's conservatism involves supporting free market capitalism, opposing regulation and labor unions, and supporting socially conservative policy. The party is generally split on the issue of how to deal with illegal immigration.In the 114th Congress, the Republicans have their largest majority in the House since the 1928 election; the GOP also holds a majority of seats in the Senate. Moreover, the party holds a majority of governorships and state legislatures."@en .
+
+    <#figure-5>  schema:contentUrl  <http://www.youtube.com/embed/-YNpmQ-5REA?rel=0> .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Democratic_Party_(United_States)/>
+            rdfs:label    "Democratic Party (United States)"@en ;
+            rdfs:comment  "The Democratic Party is one of the two major contemporary political parties in the United States, along with the younger Republican Party.Tracing its origins back to the Democratic-Republican Party, the modern Democratic Party was founded around 1828."@en ;
+            rdfs:comment  "The Democratic Party is one of the two major contemporary political parties in the United States, along with the younger Republican Party.Tracing its origins back to the Democratic-Republican Party, the modern Democratic Party was founded around 1828. There have been 15 Democratic presidents, the first being Andrew Jackson, who served from 1829 to 1837; the most recent is the current president, Barack Obama, who has served since 2009.Since the 1930s, the party has promoted a social-liberal and center-left platform, supporting a mixed economy and social justice. The party's philosophy of modern American liberalism advocates civil and political rights and liberties along with the welfare state. It pursues a mixed economy by providing government intervention and regulation in the economy. These interventions, such as universal health care, labor protection, social programs, equal opportunity, consumer protection, and environmental protection, form the party's economic policy basis.Until the late 20th century the party had a conservative pro-business wing based in major cities and a populist wing based in the rural South. After 1932 the business wing withered and after 1980 the Southern populists moved into the Republican Party. Today, the Congressional Democratic caucus is composed mostly of progressives and centrists.In the 114th Congress, following the 2014 elections, the Democratic Party holds a minority of seats in the House of Representatives as well as in the United States Senate. The party also holds a minority of governorships and control of a minority of state legislatures."@en .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Donald_Rumsfeld/>
+            rdfs:label    "Donald Rumsfeld"@en ;
+            rdfs:comment  "Donald Henry Rumsfeld (born July 9, 1932) is an American politician and businessman. Rumsfeld served as the 13th Secretary of Defense from 1975 to 1977 under President Gerald Ford, and as the 21st Secretary of Defense from 2001 to 2006 under President George W. Bush. He is both the youngest and oldest person to have served as Secretary of Defense. Additionally, Rumsfeld was a four-term U.S."@en ;
+            rdfs:comment  "Donald Henry Rumsfeld (born July 9, 1932) is an American politician and businessman. Rumsfeld served as the 13th Secretary of Defense from 1975 to 1977 under President Gerald Ford, and as the 21st Secretary of Defense from 2001 to 2006 under President George W. Bush. He is both the youngest and oldest person to have served as Secretary of Defense. Additionally, Rumsfeld was a four-term U.S. Congressman from Illinois (1962–1969), Director of the Office of Economic Opportunity (1969–1970), Counsellor  to the President (1969–1973), the United States Permanent Representative to NATO (1973–1974), and White House Chief of Staff (1974–1975).Born in Illinois, Rumsfeld attended Princeton University, graduating in 1954 with a degree in political science. After serving in the Navy for three years, he mounted a campaign for Congress in Illinois' 13th Congressional District, winning in 1962 at the age of 30. He was a leading co-sponsor of the Freedom of Information Act. Rumsfeld reluctantly accepted an appointment by President Richard Nixon to head the Office of Economic Opportunity in 1969; appointed Counsellor by Nixon and entitled to Cabinet-level status, he would also head up the Economic Stabilization Program before being appointed Ambassador to NATO. Called back to Washington in August 1974, Rumsfeld was appointed Chief of Staff by President Ford, and soon successfully urged Ford to veto an expansion of the Freedom of Information Act, though the veto was easily overridden.  Rumsfeld recruited a young one-time staffer of his, Dick Cheney, to succeed him when Ford nominated him Secretary of Defense in 1975.When Ford lost the 1976 election, Rumsfeld returned to private business life, and was named president and CEO of the pharmaceutical corporation G. D. Searle & Company, during which time he led the legalization of Aspartame. He was later named CEO of General Instrument from 1990 to 1993, and chairman of Gilead Sciences from 1997 to 2001.Rumsfeld was recommended for the position of Defense Secretary by incoming Vice President Dick Cheney in late 2000, and was appointed in January 2001 by President George W. Bush. During his tenure, he was a leading neoconservative voice and one of the key individuals responsible for the restructuring of the military in the new 21st century. Rumsfeld was crucial in planning the United States' response to the September 11 attacks, which included two wars, one in Afghanistan and one in Iraq. In addition to war strategy, Rumsfeld's tenure became highly controversial for the Abu Ghraib torture and prisoner abuse scandal, as well as the use of enhanced interrogation techniques. Known in media circles for his outspokenness and candor, he gradually lost political support as the wars continued and resigned in late 2006. He has since published his autobiography Known and Unknown: A Memoir and Rumsfeld's Rules: Leadership Lessons in Business, Politics, War, and Life."@en .
+
+    <#figure-4>  schema:contentUrl  <http://www.youtube.com/embed/SDZClQADEsA?rel=0> .
+
+    <>      schema:image             <#figure-1> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/dbpedia.org/resource/United_Nations/> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Norm_Coleman/> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/dbpedia.org/resource/American_Israel_Public_Affairs_Committee/> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Patient_Protection_and_Affordable_Care_Act/> ;
+            schema:video             <#figure-2> ;
+            schema:video             <#figure-4> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Republican_Party_(United_States)/> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Shia_Islam/> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Donald_Rumsfeld/> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/sws.geonames.org/294640/> ;
+            schema:mentions          <http://dbpedia.org/resource/United_States_Congress> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/sws.geonames.org/130758/> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Augusto_Pinochet/> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Democratic_Party_(United_States)/> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/sws.geonames.org/99237/> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/dbpedia.org/resource/John_Kerry/> ;
+            schema:video             <#figure-5> ;
+            schema:mentions          <http://localhost:8080/api/v2/resource/sws.geonames.org/6252001/> ;
+            rdf:type                 schema:Article ;
+            schema:video             <#figure-3> ;
+            <http://ogp.me/ns#type>  "article" ;
+            schema:url               "http://www.npr.org/sections/itsallpolitics/2015/08/20/433253554/iran-lobbying-battle-heats-up-on-the-airwaves" ;
+            <http://ogp.me/ns#url>   "http://www.npr.org/sections/itsallpolitics/2015/08/20/433253554/iran-lobbying-battle-heats-up-on-the-airwaves" ;
+            schema:articleBody       "Iran Lobbying Battle Heats Up On The Airwaves   U.S. Secretary of State John Kerry talks to U.S. Secretary of Energy Ernest Moniz during Iran nuclear deal negotiations.   Carlos Barria/AP   A lobbying battle is ratcheting up as members of Congress prepare to vote on President Obama's nuclear deal with Iran.   The lobbying followed lawmakers home for the August recess, as advocacy groups run TV ads, telephone congressional offices, use social media and attend legislators' public meetings.   Sen. Claire McCaskill, D-Mo., says she'll support the deal when Republican leaders in Congress bring up a resolution to disapprove it next month.   Her announcement brings President Obama one vote closer to blocking the resolution.   If Congress were to pass the measure, it would still need a two-thirds majority in each chamber to override a presidential veto.   TV ads both for and against the deal are plentiful with new ones appearing regularly, and almost all of them are meant to scare viewers.   YouTube   Citizens for a Nuclear Free Iran, a group with ties to the powerful American Israel Public Affairs Committee, released an ad Thursday with what lobbyists call a \"validator\" &mdash; in this case, retired Air Force Lt. Gen. David Deptula, a former deputy chief of staff for intelligence, surveillance and reconnaissance.   \"Let's not forget that Iran is the largest state sponsor of terrorism in the world,\" Deptula says in the ad.   \"The deal will increase the likelihood of terrorists getting ahold of a nuclear weapon.\"   YouTube   Americans United for Change, a liberal group in the coalition supporting the deal, also released a new ad.   Over photos of former Defense Secretary Donald Rumsfeld, former United Nations Ambassador John Bolton and former Vice President Dick Cheney &mdash; all proponents of the 2003 assault on Iraq &mdash; an announcer said: \"They're back.   The same people that rushed us into war in Iraq want to sink the new agreement that would help stop war with Iran.\"   Measured in raw numbers of lobbyists and dollars, this lobbying battle doesn't match the big domestic issues &mdash; the Affordable Care Act, for instance, or international trade agreements &mdash; where corporations have big stakes.   That may explain the absence of one regular lobbying activity, as noted by former Sen. Norm Coleman, R-Minn.: \"The difference in process is you're not holding fundraisers for members.   There's not a money connection here.   This is an education connection.   I mean it's not, you know, we're going to have a fundraiser and please support this.\"   But it makes the fight over the Iran deal no less intense.   \"This battle over the Iran agreement rises to that kind of a level because it really is a once-in-a-decade fight between two competing world views,\" said Dylan Williams, vice president for government affairs at J Street, a pro-Israel group helping to lead the pro-deal coalition.   YouTube   \"I think that saturation point has been reached,\" he said of the ad campaigns.   \"And that's why the dollar advantage that opponents of this deal have is not materializing into a vote advantage.\"   J Street uses validators in its messages, too.   According to its current spot, \"Israeli security experts say this agreement is the best existing option, the best possible alternative.   It must not be rejected.\"   The anti-deal coalition counters J Street's validators with veterans.   YouTube   Coleman is co-founder of a bipartisan group, the American Security Initiative, that has produced an ad featuring a retired Army staff sergeant.   The ad was co-produced with another group, Veterans Against the Deal.   The sergeant, Robert Bartlett, was wounded in Iraq in 2005, the period when Iran reportedly began supplying explosives to Shiite militia.   \"I was blown up by an Iranian bomb.   It cut me in half from the left corner of my temple down through my jaw,\" he says in the ad, the scars clearly visible.   \"Total devastation.   Every politician who's involved in this will be held accountable.\"   Williams, at J Street, said his coalition is being outspent on advertising.   Coleman said his groups may have money for lobbying, but they're up against the entire Obama administration.   \"Everything else pales in comparison,\" Coleman said.   \"All the relationships that are entwined with a sitting administration, there's no balance there.\"   The ranks of undecided lawmakers are starting to dwindle.   Coleman said the anti-deal coalition is reaching out even to some of the Democratic lawmakers who have already endorsed the deal." ;
+            schema:headline          "Iran Lobbying Battle Heats Up On The Airwaves" ;
+            schema:description       "Lawmakers have left Washington, D.C., for August recess, but intense lobbying over the Iran nuclear deal followed them home." ;
+            schema:datePublished     "2015-08-20"^^xsd:date .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Norm_Coleman/>
+            rdfs:label    "Norm Coleman"@en ;
+            rdfs:comment  "Norman Bertram \"Norm\" Coleman, Jr. (born August 17, 1949) is an American lobbyist, lawyer and politician. He was a United States senator from Minnesota from 2003 to 2009. Coleman was elected in 2002 and served in the 108th, 109th, and 110th Congresses. Before becoming a senator, he was mayor of Saint Paul, Minnesota, from 1994 to 2002."@en ;
+            rdfs:comment  "Norman Bertram \"Norm\" Coleman, Jr. (born August 17, 1949) is an American lobbyist, lawyer and politician. He was a United States senator from Minnesota from 2003 to 2009. Coleman was elected in 2002 and served in the 108th, 109th, and 110th Congresses. Before becoming a senator, he was mayor of Saint Paul, Minnesota, from 1994 to 2002. Previously a member of the Democratic-Farmer-Labor Party (DFL), Coleman became a Republican in 1996.Coleman's 2008 US Senate re-election bid, in which he was challenged by Democrat Al Franken and former senator Dean Barkley, was long unresolved. His term ended on January 3, 2009, and after a six-month legal battle in which he lost each decision in the process, the Minnesota Supreme Court unanimously declared Franken the election winner by 312 votes (out of over 3 million cast) on June 30, 2009, prompting Coleman to concede.In April 2011, Coleman joined Hogan Lovells, an international legal practice, as senior government advisor in their Washington D.C. office."@en .
+
+    <http://localhost:8080/api/v2/resource/sws.geonames.org/99237/>
+            rdfs:label  "Iraq" .
+
+    <http://localhost:8080/api/v2/resource/sws.geonames.org/6252001/>
+            rdfs:label  "United States" .
+
+    <#figure-3>  schema:contentUrl  <http://www.youtube.com/embed/OVMJC1PTmsw?rel=0> .
+
+    <#figure-2>  schema:contentUrl  <http://www.youtube.com/embed/19bGK8OalS8?rel=0> .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/United_Nations/>
+            rdfs:label    "United Nations"@en ;
+            rdfs:comment  "The United Nations (UN) is an intergovernmental organization established 24 October 1945, to promote international co-operation. A replacement for the ineffective League of Nations, the organization was created following the Second World War to prevent another such conflict. At its founding, the UN had 51 member states; there are now 193. The headquarters of the United Nations is situated in Manhattan, New York City, and enjoys extraterritoriality."@en ;
+            rdfs:comment  "The United Nations (UN) is an intergovernmental organization established 24 October 1945, to promote international co-operation. A replacement for the ineffective League of Nations, the organization was created following the Second World War to prevent another such conflict. At its founding, the UN had 51 member states; there are now 193. The headquarters of the United Nations is situated in Manhattan, New York City, and enjoys extraterritoriality. Further main offices are situated in Geneva, Nairobi and Vienna. The organization is financed by assessed and voluntary contributions from its member states. Its objectives include maintaining international peace and security, promoting human rights, fostering social and economic development, protecting the environment, and providing humanitarian aid in cases of famine, natural disaster, and armed conflict.During the Second World War, US President Franklin D. Roosevelt initiated talks on a successor agency to the League of Nations, and the United Nations Charter was drafted at a conference in April–June 1945; this charter took effect 24 October 1945, and the UN began operation. The UN's mission to preserve world peace was complicated in its early decades by the Cold War between the US and Soviet Union and their respective allies. The organization participated in major actions in Korea and the Congo, as well as approving the creation of the state of Israel in 1947. The organization's membership grew significantly following widespread decolonization in the 1960s, and by the 1970s its budget for economic and social development programmes far outstripped its spending on peacekeeping. After the end of the Cold War, the UN took on major military and peacekeeping missions across the world with varying degrees of success.The UN has six principal organs: the General Assembly (the main deliberative assembly); the Security Council (for deciding certain resolutions for peace and security); the Economic and Social Council (ECOSOC) (for promoting international economic and social co-operation and development); the Secretariat (for providing studies, information, and facilities needed by the UN); the International Court of Justice (the primary judicial organ); and the United Nations Trusteeship Council (inactive since 1994). UN System agencies include the World Bank Group, the World Health Organization, the World Food Programme, UNESCO, and UNICEF. The UN's most prominent officer is the Secretary-General, an office held by South Korean Ban Ki-moon since 2007. Non-governmental organizations may be granted consultative status with ECOSOC and other agencies to participate in the UN's work.The organization won the Nobel Peace Prize in 2001, and a number of its officers and agencies have also been awarded the prize. Other evaluations of the UN's effectiveness have been mixed. Some commentators believe the organization to be an important force for peace and human development, while others have called the organization ineffective, corrupt, or biased."@en .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Augusto_Pinochet/>
+            rdfs:label    "Augusto Pinochet"@en ;
+            rdfs:comment  "Augusto José Ramón Pinochet Ugarte, more commonly known as Augusto Pinochet (Spanish pronunciation: [auˈɣusto pinoˈtʃe]; 25 November 1915 – 10 December 2006), was  dictator of Chile between 1973 and 1990 and Commander-in-Chief of the Chilean Army from 1973 to 1998."@en ;
+            rdfs:comment  "Augusto José Ramón Pinochet Ugarte, more commonly known as Augusto Pinochet (Spanish pronunciation: [auˈɣusto pinoˈtʃe]; 25 November 1915 – 10 December 2006), was  dictator of Chile between 1973 and 1990 and Commander-in-Chief of the Chilean Army from 1973 to 1998. He was also president of the Government Junta of Chile between 1973 and 1981.Pinochet assumed power in Chile following a United States-backed coup d'état on 11 September 1973 that overthrew the elected socialist Unidad Popular government of President Salvador Allende and ended civilian rule. Several academics have stated that the support of the United States was crucial to the coup and the consolidation of power afterward. Pinochet had been promoted to Commander-in-Chief of the Army by Allende on 23 August 1973, having been its General Chief of Staff since early 1972. In December 1974, the ruling military junta appointed Pinochet President of Chile by joint decree, although not with the support of one of the coup's instigators, Air Force General Gustavo Leigh.From its beginning, the new military government implemented harsh measures against its perceived opponents. Various reports and investigations claim that between 1,200 and 3,200 people were killed, up to 80,000 people were interned and as many as 30,000 were tortured during the time Pinochet was in government.Under the influence of the free market-oriented neoliberal \"Chicago Boys\", the military government implemented economic reforms, including currency stabilization, tariff cutting, opening Chile's markets to global trade, restricting labor unions, privatizing social security, and the privatization of hundreds of state-controlled industries. These policies produced what has been referred to as the \"Miracle of Chile,\" but critics state that the government policies dramatically increased economic inequality.  Chile was, for most of the 1990s, the best-performing economy in Latin America, though academics continue to dispute the legacy of Pinochet's reforms.Pinochet's 17-year rule was given a legal framework through a  controversial 1980 plebiscite, which approved a new Constitution drafted by a government-appointed commission. In a 1988 plebiscite 56% voted against Pinochet's continuing as president, which led to democratic elections for the Presidency and Congress. After stepping down in 1990, Pinochet continued to serve as Commander-in-Chief of the Chilean Army until 10 March 1998, when he retired and became a senator-for-life in accordance with his 1980 Constitution. However, Pinochet was arrested under an international arrest warrant on a visit to London on 10 October 1998 in connection with numerous human rights allegations. Following a legal battle he was released on grounds of ill-health, and returned to Chile in March 2000. In 2004, Chilean Judge Juan Guzmán Tapia ruled that Pinochet was medically fit to stand trial and placed him under house arrest. By the time of his death on 10 December 2006, about 300 criminal charges were still pending against him in Chile for numerous human rights violations during his 17-year rule, and tax evasion and embezzlement during and after his rule; he was accused of having corruptly amassed at least US$28 million."@en .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Patient_Protection_and_Affordable_Care_Act/>
+            rdfs:label    "Patient Protection and Affordable Care Act"@en ;
+            rdfs:comment  "The Patient Protection and Affordable Care Act (PPACA), codified as amended at scattered sections of the Internal Revenue Code and in 42 U.S.C. commonly called the Affordable Care Act (ACA) or \"ObamaCare\", is a United States federal statute signed into law by President Barack Obama on March 23, 2010. Together with the Health Care and Education Reconciliation Act signed 7 days later, which amended it, it represents the most significant regulatory overhaul of the U.S."@en ;
+            rdfs:comment  "The Patient Protection and Affordable Care Act (PPACA), codified as amended at scattered sections of the Internal Revenue Code and in 42 U.S.C. commonly called the Affordable Care Act (ACA) or \"ObamaCare\", is a United States federal statute signed into law by President Barack Obama on March 23, 2010. Together with the Health Care and Education Reconciliation Act signed 7 days later, which amended it, it represents the most significant regulatory overhaul of the U.S. healthcare system since the passage of Medicare and Medicaid in 1965.The ACA was enacted to increase the quality and affordability of health insurance, lower the uninsured rate by expanding public and private insurance coverage, and reduce the costs of healthcare for individuals and the government. It introduced mechanisms like mandates, subsidies, and insurance exchanges. The law requires  insurance companies to cover all applicants within new minimum standards and offer the same rates regardless of pre-existing conditions or sex. Additional reforms were increased competition, regulation, and incentives to streamline the delivery of healthcare. In 2011 the Congressional Budget Office projected that the ACA would lower both future deficits and Medicare spending.On June 28, 2012, the United States Supreme Court upheld the constitutionality of the ACA's individual mandate as an exercise of Congress's taxing power in the case National Federation of Independent Business v. Sebelius. However, the Court held that states cannot be forced to participate in the ACA's Medicaid expansion under penalty of losing their current Medicaid funding. Since the ruling, the law and its implementation have continued to face challenges in Congress and federal courts, and from some state governments, conservative advocacy groups, labor unions, and small business organizations.As of May 2014, about 20 million Americans had gained health insurance coverage under the ACA, and the percentage of uninsured Americans dropped from 18% in 2013 to 13.4%."@en .
+
+    <http://localhost:8080/api/v2/resource/sws.geonames.org/130758/>
+            rdfs:label  "Iran" .
+
+    <http://localhost:8080/api/v2/resource/sws.geonames.org/294640/>
+            rdfs:label  "Israel" .
+
+    <#figure-1>  schema:contentUrl  <http://media.npr.org/assets/img/2015/08/20/ap_803866091780_wide-9ecf33b2a2ea35253a38b908240616fed3a74ca1-s1100-c15.jpg> ;
+            rdfs:comment       "U.S. Secretary of State John Kerry talks to U.S. Secretary of Energy Ernest Moniz during Iran nuclear deal negotiations." .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/American_Israel_Public_Affairs_Committee/>
+            rdfs:label    "American Israel Public Affairs Committee"@en ;
+            rdfs:comment  "The American Israel Public Affairs Committee (AIPAC, /ˈeɪpæk/ AY-pak) is a lobbying group that advocates pro-Israel policies to the Congress and Executive Branch of the United States."@en ;
+            rdfs:comment  "The American Israel Public Affairs Committee (AIPAC, /ˈeɪpæk/ AY-pak) is a lobbying group that advocates pro-Israel policies to the Congress and Executive Branch of the United States. The current President of AIPAC is Robert Cohen.Describing itself as \"America's Pro-Israel Lobby\", AIPAC has more than 100,000 members,  seventeen regional offices, and \"a vast pool of donors.\" It has been called \"the most important organization affecting America's relationship with Israel,\" and one of the most powerful lobbying groups in the United States. The group does not raise funds for political candidates itself, but helps organize to channel money to candidates.Its critics have stated it acts as an agent of the Israeli government with a \"stranglehold\" on the United States Congress with its power and influence.  The group has been accused of being strongly allied with the Likud party of Israel, and the Republican Party in the US, but an AIPAC spokesman has called this a \"malicious mischaracterization.\"   AIPAC describes itself as a bipartisan organization, and bills it lobbies for in Congress are always jointly sponsored by both a Democrat and Republican.In 2005, a Pentagon analyst pleaded guilty to charges of passing US government secrets to two AIPAC staffers in what is known as the AIPAC espionage scandal. Both staffers were later fired by AIPAC. In 2009, all charges against the former AIPAC employees were dropped."@en .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/Shia_Islam/>
+            rdfs:label    "Shia Islam"@en ;
+            rdfs:comment  "The Shia (/ˈʃiːə/; Arabic: شيعة‎ Shīʿah), or the Shiites (/ˈʃiːaɪts/), represent the second largest denomination of Islam. Adherents of Shia Islam are called Shias or the Shi'a as a collective or Shi'i individually. Shi'a is the short form of the historic phrase Shīʻatu ʻAlī (شيعة علي) meaning \"followers\", \"faction\" or \"party\" of Muhammad's son-in-law and cousin Ali, whom the Shia believe to be Muhammad's successor in the Caliphate."@en ;
+            rdfs:comment  "The Shia (/ˈʃiːə/; Arabic: شيعة‎ Shīʿah), or the Shiites (/ˈʃiːaɪts/), represent the second largest denomination of Islam. Adherents of Shia Islam are called Shias or the Shi'a as a collective or Shi'i individually. Shi'a is the short form of the historic phrase Shīʻatu ʻAlī (شيعة علي) meaning \"followers\", \"faction\" or \"party\" of Muhammad's son-in-law and cousin Ali, whom the Shia believe to be Muhammad's successor in the Caliphate. Twelver Shia (Ithnā'ashariyyah) is the largest branch of Shia Islam, and the term Shia Muslim is often taken to refer to Twelvers by default. As of 2009 Shia Muslims constituted 10-13% of the world's Muslim population and 39% of the Middle East's entire population.Shi'i Islam is based on the Quran and the message of the Islamic prophet Muhammad attested in hadith recorded by the Shia, and certain books deemed sacred to the Shia (Nahj al-Balagha). Shia consider Ali to have been divinely appointed as the successor to Muhammad, and as the first Imam. In the centuries after the death of Muhammad, the Shia extended this \"Imami\" doctrine to Muhammad's family, the Ahl al-Bayt (\"the People of the House\"), and certain individuals among his descendants, known as Imams, who they believe possess special spiritual and political authority over the community, infallibility, and other quasi-divine traits. Although there are myriad Shi'i subsects, modern Shi'i Islam has been divided into three main groupings: Twelvers, Ismailis and Zaidis."@en .
+
+    <http://localhost:8080/api/v2/resource/dbpedia.org/resource/John_Kerry/>
+            rdfs:label    "John Kerry"@en ;
+            rdfs:comment  "John Forbes Kerry (born December 11, 1943) is an American politician who is the 68th and current United States Secretary of State. He has served in the United States Senate, and was chairman of the Senate Foreign Relations Committee. Kerry was the candidate of the Democratic Party in the 2004 presidential election, losing to incumbent President George W. Bush.Kerry was born in Aurora, Colorado and attended boarding school in Massachusetts and New Hampshire."@en ;
+            rdfs:comment  "John Forbes Kerry (born December 11, 1943) is an American politician who is the 68th and current United States Secretary of State. He has served in the United States Senate, and was chairman of the Senate Foreign Relations Committee. Kerry was the candidate of the Democratic Party in the 2004 presidential election, losing to incumbent President George W. Bush.Kerry was born in Aurora, Colorado and attended boarding school in Massachusetts and New Hampshire. He graduated from Yale University class of 1966 with a political science major, and was a member of the Skull and Bones secret society. Kerry enlisted in the Naval Reserve in 1966, and during 1968–1969 served an abbreviated four-month tour of duty in South Vietnam as officer-in-charge (OIC) of a Swift Boat. For that service, he was awarded combat medals that include the Silver Star, Bronze Star, and three Purple Hearts. Securing an early return to the United States, Kerry joined the Vietnam Veterans Against the War in which he served as a nationally recognized spokesman and as an outspoken opponent of the Vietnam War. He appeared in the Fulbright Hearings before the Senate Committee on Foreign Affairs where he deemed United States war policy in Vietnam to be the cause of war crimes.After receiving his J.D. from Boston College Law School, Kerry worked as an Assistant District Attorney. He served as Lieutenant Governor of Massachusetts under Michael Dukakis from 1983 to 1985. He won the Democratic primary in 1984 for the U.S. Senate and was sworn in the following January. On the Senate Foreign Relations Committee, he led a series of hearings from 1987 to 1989 which were a precursor to the Iran–Contra affair. Kerry was reelected to additional terms in 1990, 1996, 2002, and 2008. In 2002, Kerry voted to authorize the President \"to use force, if necessary, to disarm Saddam Hussein\", but warned that the administration should exhaust its diplomatic avenues before launching war. In his 2004 presidential campaign, Kerry criticized George W. Bush for the Iraq War. He and his running mate Senator John Edwards lost the race, finishing 35 electoral votes behind Bush-Cheney. Subsequently, he established the Keeping America's Promise PAC. Kerry became chairman of the Senate Foreign Relations Committee in 2009. Having been nominated by President Barack Obama to succeed outgoing Secretary of State Hillary Rodham Clinton and then confirmed by the U.S. Senate by a vote of 94–3 on January 29, 2013, Kerry assumed the office on February 1, 2013."@en .
+  </script>
+</head>
+
+<body>
+
+  <div id="graph"></div>
+
+  <h1><span resource="#char=11,15" typeof="fise:TextAnnotation"><span property="fise:selected-text">Iran</span></span> Lobbying Battle Heats Up On The Airwaves</h1>
+
+  <figure id="figure-1">
+    <img class="img lazyOnLoad" src="http://media.npr.org/assets/img/2015/08/20/ap_803866091780_wide-9ecf33b2a2ea35253a38b908240616fed3a74ca1-s1100-c15.jpg" data-original="http://media.npr.org/assets/img/2015/08/20/ap_803866091780_wide-9ecf33b2a2ea35253a38b908240616fed3a74ca1-s1100.jpg" title="U.S. Secretary of State John Kerry talks to U.S. Secretary of Energy Ernest Moniz during Iran nuclear deal negotiations." alt="U.S. Secretary of State John Kerry talks to U.S. Secretary of Energy Ernest Moniz during Iran nuclear deal negotiations."/>
+    <figcaption>
+      <div class="caption">
+        <p><span resource="#char=678,682" typeof="fise:TextAnnotation"><span property="fise:selected-text">U.S.</span></span> Secretary of State <span resource="#char=702,712" typeof="fise:TextAnnotation"><span property="fise:selected-text">John Kerry</span></span> talks to <span resource="#char=722,726" typeof="fise:TextAnnotation"><span property="fise:selected-text">U.S.</span></span> Secretary of Energy <span resource="#char=747,759" typeof="fise:TextAnnotation"><span property="fise:selected-text">Ernest Moniz</span></span> during <span resource="#char=767,771" typeof="fise:TextAnnotation"><span property="fise:selected-text">Iran</span></span> nuclear deal negotiations.</p>
+      </div>
+      <span class="credit"><span resource="#char=875,891" typeof="fise:TextAnnotation"><span property="fise:selected-text">Carlos Barria/AP</span></span></span>
+    </figcaption>
+  </figure>
+
+  <p>A lobbying battle is ratcheting up as members of <span resource="#char=990,998" typeof="fise:TextAnnotation"><span property="fise:selected-text">Congress</span></span> prepare to vote on President <span resource="#char=1028,1033" typeof="fise:TextAnnotation"><span property="fise:selected-text">Obama</span></span>'s nuclear deal with <span resource="#char=1054,1058" typeof="fise:TextAnnotation"><span property="fise:selected-text">Iran</span></span>.</p>
+
+  <p>The lobbying followed lawmakers home for the <span resource="#char=1112,1118" typeof="fise:TextAnnotation"><span property="fise:selected-text">August</span></span> recess, as advocacy groups run TV ads, telephone congressional offices, use social media and attend legislators' public meetings.</p>
+
+  <p>Sen. <span resource="#char=1261,1277" typeof="fise:TextAnnotation"><span property="fise:selected-text">Claire McCaskill</span></span>, <span resource="#char=1279,1284" typeof="fise:TextAnnotation"><span property="fise:selected-text">D-Mo.</span></span>, says <span resource="#char=1291,1294" typeof="fise:TextAnnotation"><span property="fise:selected-text">she</span></span>'ll support the deal when <span resource="#char=1320,1330" typeof="fise:TextAnnotation"><span property="fise:selected-text">Republican</span></span> leaders in <span resource="#char=1342,1350" typeof="fise:TextAnnotation"><span property="fise:selected-text">Congress</span></span> bring up a resolution to disapprove <span resource="#char=1387,1389" typeof="fise:TextAnnotation"><span property="fise:selected-text">it</span></span> next month.</p>
+
+  <p><span resource="#char=1409,1412" typeof="fise:TextAnnotation"><span property="fise:selected-text">Her</span></span> announcement brings President <span resource="#char=1443,1448" typeof="fise:TextAnnotation"><span property="fise:selected-text">Obama</span></span> <span resource="#char=1449,1452" typeof="fise:TextAnnotation"><span property="fise:selected-text">one</span></span> vote closer to blocking the resolution. If <span resource="#char=1496,1504" typeof="fise:TextAnnotation"><span property="fise:selected-text">Congress</span></span> were to pass the measure, <span resource="#char=1531,1533" typeof="fise:TextAnnotation"><span property="fise:selected-text">it</span></span> would still need a two-thirds majority in each chamber to override a presidential veto.</p>
+
+  <p>TV ads both for and against the deal are plentiful with new ones appearing regularly, and almost all of them are meant to scare viewers.</p>
+
+  <figure id="figure-2">
+    <video preload="none">
+      <source type="video/youtube" src="http://www.youtube.com/embed/19bGK8OalS8?rel=0"/>
+    </video>
+    <figcaption>
+      <b class="credit">
+        <b class="source">YouTube</b>
+      </b>
+    </figcaption>
+  </figure>
+
+  <p>Citizens for a <span resource="#char=2018,2035" typeof="fise:TextAnnotation"><span property="fise:selected-text">Nuclear Free Iran</span></span>, a group with ties to the powerful <span resource="#char=2071,2111" typeof="fise:TextAnnotation"><span property="fise:selected-text">American Israel Public Affairs Committee</span></span>, released an ad <span resource="#char=2128,2136" typeof="fise:TextAnnotation"><span property="fise:selected-text">Thursday</span></span> with what lobbyists call a "validator" &mdash; in this case, retired <span resource="#char=2206,2215" typeof="fise:TextAnnotation"><span property="fise:selected-text">Air Force</span></span> Lt. Gen. <span resource="#char=2225,2238" typeof="fise:TextAnnotation"><span property="fise:selected-text">David Deptula</span></span>, a former deputy chief of staff for intelligence, surveillance and reconnaissance.</p>
+
+  <p>"Let<span resource="#char=2333,2335" typeof="fise:TextAnnotation"><span property="fise:selected-text">'s</span></span> not forget that <span resource="#char=2352,2356" typeof="fise:TextAnnotation"><span property="fise:selected-text">Iran</span></span> is the largest state sponsor of terrorism in the world," <span resource="#char=2414,2421" typeof="fise:TextAnnotation"><span property="fise:selected-text">Deptula</span></span> says in the ad. "The deal will increase the likelihood of terrorists getting ahold of a nuclear weapon."</p>
+
+  <figure id="figure-3">
+    <video preload="none">
+      <source type="video/youtube" src="http://www.youtube.com/embed/OVMJC1PTmsw?rel=0"/>
+    </video>
+    <figcaption>
+      <b class="credit">
+        <b class="source">YouTube</b>
+      </b>
+    </figcaption>
+  </figure>
+
+  <p>Americans <span resource="#char=2774,2791" typeof="fise:TextAnnotation"><span property="fise:selected-text">United for Change</span></span>, a liberal group in the coalition supporting the deal, also released a new ad. Over photos of former <span resource="#char=2893,2900" typeof="fise:TextAnnotation"><span property="fise:selected-text">Defense</span></span> Secretary <span resource="#char=2911,2926" typeof="fise:TextAnnotation"><span property="fise:selected-text">Donald Rumsfeld</span></span>, former <span resource="#char=2935,2949" typeof="fise:TextAnnotation"><span property="fise:selected-text">United Nations</span></span> Ambassador <span resource="#char=2961,2972" typeof="fise:TextAnnotation"><span property="fise:selected-text">John Bolton</span></span> and former Vice President <span resource="#char=2999,3010" typeof="fise:TextAnnotation"><span property="fise:selected-text">Dick Cheney</span></span> &mdash; all proponents of the <span resource="#char=3041,3045" typeof="fise:TextAnnotation"><span property="fise:selected-text">2003</span></span> assault on <span resource="#char=3057,3061" typeof="fise:TextAnnotation"><span property="fise:selected-text">Iraq</span></span> &mdash; an announcer said: "<span resource="#char=3090,3094" typeof="fise:TextAnnotation"><span property="fise:selected-text">They</span></span>'re back. The same people that rushed <span resource="#char=3132,3134" typeof="fise:TextAnnotation"><span property="fise:selected-text">us</span></span> into war in <span resource="#char=3147,3151" typeof="fise:TextAnnotation"><span property="fise:selected-text">Iraq</span></span> want to sink the new agreement that would help stop war with <span resource="#char=3213,3217" typeof="fise:TextAnnotation"><span property="fise:selected-text">Iran</span></span>."</p>
+
+  <p>Measured in raw numbers of lobbyists and dollars, this lobbying battle doesn't match the big domestic issues &mdash; the <span resource="#char=3348,3367" typeof="fise:TextAnnotation"><span property="fise:selected-text">Affordable Care Act</span></span>, for instance, or international trade agreements &mdash; where corporations have big stakes.</p>
+
+  <p><span resource="#char=3468,3472" typeof="fise:TextAnnotation"><span property="fise:selected-text">That</span></span> may explain the absence of <span resource="#char=3500,3503" typeof="fise:TextAnnotation"><span property="fise:selected-text">one</span></span> regular lobbying activity, as noted by former Sen. <span resource="#char=3555,3567" typeof="fise:TextAnnotation"><span property="fise:selected-text">Norm Coleman</span></span>, R-Minn.: "The difference in process is <span resource="#char=3608,3611" typeof="fise:TextAnnotation"><span property="fise:selected-text">you</span></span>'re not holding fundraisers for members. There's not a money connection here. This is an education connection. <span resource="#char=3722,3723" typeof="fise:TextAnnotation"><span property="fise:selected-text">I</span></span> mean <span resource="#char=3729,3731" typeof="fise:TextAnnotation"><span property="fise:selected-text">it</span></span>'s not, <span resource="#char=3739,3742" typeof="fise:TextAnnotation"><span property="fise:selected-text">you</span></span> know, <span resource="#char=3749,3751" typeof="fise:TextAnnotation"><span property="fise:selected-text">we</span></span>'re going to have a fundraiser and please support this."</p>
+
+  <p>But <span resource="#char=3819,3821" typeof="fise:TextAnnotation"><span property="fise:selected-text">it</span></span> makes the fight over the <span resource="#char=3847,3851" typeof="fise:TextAnnotation"><span property="fise:selected-text">Iran</span></span> deal no less intense.</p>
+
+  <p>"This battle over the <span resource="#char=3903,3907" typeof="fise:TextAnnotation"><span property="fise:selected-text">Iran</span></span> agreement rises to that kind of a level because <span resource="#char=3956,3958" typeof="fise:TextAnnotation"><span property="fise:selected-text">it</span></span> really is a once-in-a-decade fight between <span resource="#char=4002,4005" typeof="fise:TextAnnotation"><span property="fise:selected-text">two</span></span> competing world views," said <span resource="#char=4035,4049" typeof="fise:TextAnnotation"><span property="fise:selected-text">Dylan Williams</span></span>, vice president for government affairs at J Street, a <span resource="#char=4104,4114" typeof="fise:TextAnnotation"><span property="fise:selected-text">pro-Israel</span></span> group helping to lead the pro-deal coalition.</p>
+
+  <figure id="figure-4">
+    <video preload="none">
+      <source type="video/youtube" src="http://www.youtube.com/embed/SDZClQADEsA?rel=0"/>
+    </video>
+    <figcaption>
+      <b class="credit">
+        <b class="source">YouTube</b>
+      </b>
+    </figcaption>
+  </figure>
+
+  <p>"<span resource="#char=4399,4400" typeof="fise:TextAnnotation"><span property="fise:selected-text">I</span></span> think that saturation point has been reached," <span resource="#char=4448,4450" typeof="fise:TextAnnotation"><span property="fise:selected-text">he</span></span> said of the ad campaigns. "And <span resource="#char=4482,4486" typeof="fise:TextAnnotation"><span property="fise:selected-text">that</span></span>'s why the dollar advantage that opponents of this deal have is not materializing into a vote advantage."</p>
+
+  <p>J Street uses validators in <span resource="#char=4627,4630" typeof="fise:TextAnnotation"><span property="fise:selected-text">its</span></span> messages, too. According to <span resource="#char=4659,4662" typeof="fise:TextAnnotation"><span property="fise:selected-text">its</span></span> current spot, "<span resource="#char=4678,4685" typeof="fise:TextAnnotation"><span property="fise:selected-text">Israeli</span></span> security experts say this agreement is the best existing option, the best possible alternative. <span resource="#char=4782,4784" typeof="fise:TextAnnotation"><span property="fise:selected-text">It</span></span> must not be rejected."</p>
+
+  <p>The anti-deal coalition counters J Street's validators with veterans.</p>
+
+  <figure id="figure-5">
+    <video preload="none">
+      <source type="video/youtube" src="http://www.youtube.com/embed/-YNpmQ-5REA?rel=0"/>
+    </video>
+    <figcaption>
+      <b class="credit">
+        <b class="source">YouTube</b>
+      </b>
+    </figcaption>
+  </figure>
+
+  <p><span resource="#char=5122,5129" typeof="fise:TextAnnotation"><span property="fise:selected-text">Coleman</span></span> is co-founder of a bipartisan group, the <span resource="#char=5171,5199" typeof="fise:TextAnnotation"><span property="fise:selected-text">American Security Initiative</span></span>, that has produced an ad featuring a retired <span resource="#char=5245,5249" typeof="fise:TextAnnotation"><span property="fise:selected-text">Army</span></span> staff sergeant. The ad was co-produced with another group, <span resource="#char=5309,5334" typeof="fise:TextAnnotation"><span property="fise:selected-text">Veterans Against the Deal</span></span>.</p>
+
+  <p>The sergeant, <span resource="#char=5357,5372" typeof="fise:TextAnnotation"><span property="fise:selected-text">Robert Bartlett</span></span>, was wounded in <span resource="#char=5389,5393" typeof="fise:TextAnnotation"><span property="fise:selected-text">Iraq</span></span> in <span resource="#char=5397,5401" typeof="fise:TextAnnotation"><span property="fise:selected-text">2005</span></span>, the period when <span resource="#char=5419,5423" typeof="fise:TextAnnotation"><span property="fise:selected-text">Iran</span></span> reportedly began supplying explosives to <span resource="#char=5465,5471" typeof="fise:TextAnnotation"><span property="fise:selected-text">Shiite</span></span> militia.</p>
+
+  <p>"<span resource="#char=5489,5490" typeof="fise:TextAnnotation"><span property="fise:selected-text">I</span></span> was blown up by an <span resource="#char=5510,5517" typeof="fise:TextAnnotation"><span property="fise:selected-text">Iranian</span></span> bomb. <span resource="#char=5524,5526" typeof="fise:TextAnnotation"><span property="fise:selected-text">It</span></span> cut <span resource="#char=5531,5533" typeof="fise:TextAnnotation"><span property="fise:selected-text">me</span></span> in half from the left corner of <span resource="#char=5566,5568" typeof="fise:TextAnnotation"><span property="fise:selected-text">my</span></span> temple down through <span resource="#char=5589,5591" typeof="fise:TextAnnotation"><span property="fise:selected-text">my</span></span> jaw," <span resource="#char=5598,5600" typeof="fise:TextAnnotation"><span property="fise:selected-text">he</span></span> says in the ad, the scars clearly visible. "Total devastation. Every politician who's involved in this will be held accountable."</p>
+
+  <p><span resource="#char=5738,5746" typeof="fise:TextAnnotation"><span property="fise:selected-text">Williams</span></span>, at J Street, said <span resource="#char=5766,5769" typeof="fise:TextAnnotation"><span property="fise:selected-text">his</span></span> coalition is being outspent on advertising. <span resource="#char=5814,5821" typeof="fise:TextAnnotation"><span property="fise:selected-text">Coleman</span></span> said <span resource="#char=5827,5830" typeof="fise:TextAnnotation"><span property="fise:selected-text">his</span></span> groups may have money for lobbying, but <span resource="#char=5871,5875" typeof="fise:TextAnnotation"><span property="fise:selected-text">they</span></span>'re up against the entire <span resource="#char=5901,5906" typeof="fise:TextAnnotation"><span property="fise:selected-text">Obama</span></span> administration.</p>
+
+  <p>"Everything else pales in comparison," <span resource="#char=5969,5976" typeof="fise:TextAnnotation"><span property="fise:selected-text">Coleman</span></span> said. "All the relationships that are entwined with a sitting administration, there's no balance there."</p>
+
+  <p>The ranks of undecided lawmakers are starting to dwindle. <span resource="#char=6147,6154" typeof="fise:TextAnnotation"><span property="fise:selected-text">Coleman</span></span> said the anti-deal coalition is reaching out even to some of the <span resource="#char=6220,6230" typeof="fise:TextAnnotation"><span property="fise:selected-text">Democratic</span></span> lawmakers who have already endorsed the deal.</p>
+
+  <script src="vendor/RDFa.js"></script>
   <script src="scripts/app.js"></script>
 </body>
 </html>

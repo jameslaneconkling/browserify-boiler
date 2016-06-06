@@ -38,5 +38,11 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "d3": "^3.5.17",
+    "jquery": "^2.2.4",
+    "lodash": "^4.13.1",
+    "rdf-ext": "^0.3.0",
+    "rdf-parser-rdfa": "^0.3.0-rc1"
+  }
 }
