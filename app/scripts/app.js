@@ -10,24 +10,13 @@ const log = console.log.bind(console);
 const flatMap = [(flatMap, entityType) => flatMap.concat(entityType), []];
 
 const baseURI = 'http://localhost:8080/api/v2/doc/www.npr.org/sections/itsallpolitics/2015/08/20/433253554/iran-lobbying-battle-heats-up-on-the-airwaves/';
-const getTextAnnotation = ($child) => $child.closest('[typeof="fise:TextAnnotation"]');
+const MARGIN = 30;
 
 const getObjectsByCurie = (graph, curie, subject) => subject.getValues(graph.curieParser.parse(curie));
-const getSelectedText = (subject) => subject.predicates['http://fise.iks-project.eu/ontology/selected-text'].objects.map(object => object.value);
-const getType = (subject) => subject.predicates['http://www.w3.org/1999/02/22-rdf-syntax-ns#type'].objects.map(object => object.value);
-const getLabel = (subject) => subject.predicates['http://fise.iks-project.eu/ontology/entity-label'].objects.map(object => object.value);
-const getEntityType = (subject) => subject.predicates['http://fise.iks-project.eu/ontology/entity-type'] ?
-                                   subject.predicates['http://fise.iks-project.eu/ontology/entity-type'].objects.map(object => object.value) :
-                                   [];
-const getRelations = (subject) => subject.predicates['http://purl.org/dc/terms/relation'] ?
-                                  subject.predicates['http://purl.org/dc/terms/relation'].objects.map(object => object.value) :
-                                  [];
-
-const getLabelsForEntityTypes = (rdf, entityType) => rdf.getSubjects("fise:entity-type", entityType)
+const getLabelsForEntityType = (rdf, entityType) => rdf.getSubjects("fise:entity-type", entityType)
   .map(rdf.getSubject.bind(rdf))
   .map(subject => getObjectsByCurie(rdf.graph, 'fise:entity-label', subject));
 
-const MARGIN = 30;
 
 const app = {
   init() {
@@ -37,44 +26,42 @@ const app = {
   },
 
   buildGraph() {
-    const rdf = document.data;
-    this.rdf = rdf;
-    this.getLabelsForEntityTypes = getLabelsForEntityTypes;
+    this.rdf = document.data;
 
-    this.getObjectsByCurie = _.curry(getObjectsByCurie)(rdf);
+    this.getObjectsByCurie = _.curry(getObjectsByCurie)(this.rdf.graph);
     // const subjects = rdf.getSubjects()
     //   .map(subjectId => rdf.getSubject(subjectId).toObject());
     // this.graph = rdfaSubjects2jsonGraph(subjects).graph;
   },
 
   attachEventListeners() {
-    $('[typeof="fise:TextAnnotation"]').on('mouseenter', e => this.textAnnotationEntered(e));
+    $('[typeof="fise:TextAnnotation"]').on('mouseenter', e => this.highlightEntities(e));
     $('[typeof="fise:TextAnnotation"]').on('mouseleave', () => this.removeAnnotationHighlights());
   },
 
-  textAnnotationEntered(e) {
-    const textAnnotationId = getTextAnnotation($(e.target)).attr('resource');
+  highlightEntities(e) {
+    const getSubject = this.rdf.getSubject.bind(this.rdf);
+    const expandCurie = this.rdf.graph.curieParser.parse.bind(this.rdf.graph.curieParser);
+
+    const textAnnotationId = $(e.target).closest('[typeof="fise:TextAnnotation"]').attr('resource');
     const textAnnotation = this.rdf.getSubject(textAnnotationId);
-    // const selectedText = getSelectedText(textAnnotation)[0];
 
     const parentEntities = this.rdf.getSubjects('dcterms:relation', baseURI + textAnnotationId)
-      .map(parentSubjectId => this.rdf.getSubject(parentSubjectId))
-      .filter(parentSubject => getType(parentSubject).indexOf('http://fise.iks-project.eu/ontology/EntityAnnotation') > -1);
+      .map(getSubject)
+      .filter(subject => subject.types.indexOf(expandCurie('fise:EntityAnnotation')) > -1);
 
-    const entityTypes = parentEntities
-      .map(getEntityType)
-      .reduce(...flatMap);
-
-    const textAnnotationsOfSameType = entityTypes
-      .map(type => this.rdf.getSubjects('http://fise.iks-project.eu/ontology/entity-type', type))
+    const textAnnotationsOfSameType = parentEntities
+      .map(this.getObjectsByCurie('fise:entity-type'))
       .reduce(...flatMap)
-      .map(textAnnotationId => this.rdf.getSubject(textAnnotationId))
-      .map(getRelations)
+      .map(type => this.rdf.getSubjects(expandCurie('fise:entity-type'), type))
+      .reduce(...flatMap)
+      .map(getSubject)
+      .map(this.getObjectsByCurie('dcterms:relation'))
       .reduce(...flatMap)
       .map(url => url.replace(baseURI, ''));
 
     const textAnnotationsOfSameEntity = parentEntities
-      .map(getRelations)
+      .map(this.getObjectsByCurie('dcterms:relation'))
       .reduce(...flatMap)
       .map(url => url.replace(baseURI, ''));
 
