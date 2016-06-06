@@ -7,7 +7,8 @@ import {rdfaSubjects2jsonGraph}  from './rdf/rdf-utils';
 const d3 = require('d3');
 const $ = require('jquery');
 const log = console.log.bind(console);
-const flatMap = [(flatMap, entityType) => flatMap.concat(entityType), []];
+const flatMap = [(flatMap, item) => flatMap.concat(item), []];
+const unique = [(uniqueMap, item) => uniqueMap.indexOf(item) === -1 ? uniqueMap.concat(item) : uniqueMap, []];
 
 const baseURI = 'http://localhost:8080/api/v2/doc/www.npr.org/sections/itsallpolitics/2015/08/20/433253554/iran-lobbying-battle-heats-up-on-the-airwaves/';
 const MARGIN = 30;
@@ -67,6 +68,21 @@ const app = {
 
     this.highlightTypeAnnotations(textAnnotationsOfSameType);
     this.highlightEntityAnnotations(textAnnotationsOfSameEntity);
+
+    const types = parentEntities
+      .map(this.getObjectsByCurie('fise:entity-type'))
+      .reduce(...flatMap)
+      .map(curieOrURL => this.rdf.shorten(curieOrURL) || curieOrURL)
+      .reduce(...unique);
+
+    const labels = parentEntities
+      .map(this.getObjectsByCurie('fise:entity-label'))
+      .reduce(...flatMap)
+      .reduce(...unique);
+
+    console.log('type:', types.join(' - '));
+    console.log('label:', labels.join(' - '));
+    console.log('\n');
   },
 
   removeAnnotationHighlights() {
